@@ -20,9 +20,13 @@ firefoxOptions = Options()
 firefoxOptions.add_argument("--headless")
 service = Service(GeckoDriverManager().install())
 driver = webdriver.Firefox(
+    executable_path=GeckoDriverManager().install())
     options=firefoxOptions,
     service=service,
 )
+
+
+
 driver.get(URL)
 
 title = driver.title
