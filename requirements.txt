@@ -2,3 +2,4 @@ Pillow==9.2.0
 streamlit
 selenium
 webdriver_manager
+webdriver-manager
