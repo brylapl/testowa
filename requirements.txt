@@ -1,0 +1,10 @@
+streamlit
+pandas
+beautifulsoup4
+requests
+lxml
+scikit-learn 
+xgboost
+selenium
+seleniumbase
+webdriver-manager
