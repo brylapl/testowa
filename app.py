@@ -31,14 +31,22 @@ except:
 btn = st.button('start')
 
 if btn:
-    c.execute("SELECT DISTINCT KRAJ, LIGA FROM list_teams")
-    rows = c.fetchall()
-    html_list = "<ul>"
-    for row in rows:
-        html_list += "<li>" + row[0] + "<ul><li>" + row[1] + "</li></ul></li>"
-        html_list += "</ul>"
-        
-      
+    # Pobranie unikalnych połączeń dwóch kolumn
+    c.execute('SELECT DISTINCT KRAJ, LIGA FROM list_teams')
+    results = c.fetchall()
+    html_list = '<ul>'
+    current_country = None
+    for row in results:
+        country = row[0]
+        city = row[1]
+        if country != current_country:
+            if current_country:
+                html_list += '</ul></li>'
+        html_list += f'<li>{country}<ul>'
+        current_country = country
+        html_list += f'<li>{city}</li>'
+    html_list += '</ul></li></ul>'    
+
     st.markdown(html_list,unsafe_allow_html=True)
 
 # Zapisanie do pliku html
