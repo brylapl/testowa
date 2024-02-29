@@ -33,21 +33,23 @@ btn = st.button('start')
 if btn:
     # Pobranie unikalnych połączeń dwóch kolumn
     c.execute('SELECT DISTINCT KRAJ, LIGA FROM list_teams')
-    results = c.fetchall()
-    html_list = '<ul>'
-    current_country = None
-    for row in results:
+    rows = c.fetchall()
+    unique_values = {}
+    for row in data:
         country = row[0]
         city = row[1]
-        if country != current_country:
-            if current_country:
-                html_list += '</ul></li>'
-        html_list += f'<li>{country}<ul>'
-        current_country = country
-        html_list += f'<li>{city}</li>'
-    html_list += '</ul></li></ul>'    
-
-    st.markdown(html_list,unsafe_allow_html=True)
+        
+        if country not in unique_values:
+            unique_values[country] = [city]
+        else:
+            unique_values[country].append(city)
+            
+          
+    for country, cities in unique_values.items():
+        st.write(country)
+    for city in cities:
+        st.write(f"- {city}")
+    #st.markdown(html_list,unsafe_allow_html=True)
 
 # Zapisanie do pliku html
 #with open("lista.html", "w") as file:
