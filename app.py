@@ -22,22 +22,27 @@ st.header('Tytul')
 
 #POŁĄCZENIE Z BAZĄ DANYCH
 conn = sqlite3.connect('soccer.db')
-c = conn.cursor()
-
+try:
+    c = conn.cursor()
+    st.write('połączono') 
+except:
+    st.write('błąd') 
 # Wykonanie zapytania SQL
-c.execute("SELECT DISTINCT KRAJ, LIGA FROM list_teams")
-rows = c.fetchall()
+btn = st.button('start')
 
-# Tworzenie listy zagnieżdżonej
-html_list = "<ul>"
-for row in rows:
-    html_list += "<li>" + row[0] + "<ul><li>" + row[1] + "</li></ul></li>"
-html_list += "</ul>"
+if btn:
+    c.execute("SELECT DISTINCT KRAJ, LIGA FROM list_teams")
+    rows = c.fetchall()
+    html_list = "<ul>"
+    for row in rows:
+        html_list += "<li>" + row[0] + "<ul><li>" + row[1] + "</li></ul></li>"
+        html_list += "</ul>"
+        
+        st.markdown(html_list,unsafe_allow_html=True)
 
-st.markdown(html_list,unsafe_allow_html=True)
 # Zapisanie do pliku html
 #with open("lista.html", "w") as file:
     #file.write(html_list)
 
 # Zakończenie połączenia
-conn.close()
+#conn.close()
