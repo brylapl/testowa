@@ -38,7 +38,8 @@ if btn:
         html_list += "<li>" + row[0] + "<ul><li>" + row[1] + "</li></ul></li>"
         html_list += "</ul>"
         
-        st.markdown(html_list,unsafe_allow_html=True)
+      
+    st.markdown(html_list,unsafe_allow_html=True)
 
 # Zapisanie do pliku html
 #with open("lista.html", "w") as file:
