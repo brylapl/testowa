@@ -19,3 +19,25 @@ from time import sleep
 
 st.write('APP')
 st.header('Tytul')
+
+#POŁĄCZENIE Z BAZĄ DANYCH
+conn = sqlite3.connect('soccer.db')
+c = conn.cursor()
+
+# Wykonanie zapytania SQL
+c.execute("SELECT DISTINCT KRAJ, LIGA FROM list_teams")
+rows = c.fetchall()
+
+# Tworzenie listy zagnieżdżonej
+html_list = "<ul>"
+for row in rows:
+    html_list += "<li>" + row[0] + "<ul><li>" + row[1] + "</li></ul></li>"
+html_list += "</ul>"
+
+st.markdown('html_list',unsafe_allow_html=True)
+# Zapisanie do pliku html
+#with open("lista.html", "w") as file:
+    #file.write(html_list)
+
+# Zakończenie połączenia
+conn.close()
