@@ -23,9 +23,8 @@ st.header('Tytul')
 #POŁĄCZENIE Z BAZĄ DANYCH
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
-if st.button('Utwórz tabelę'):
-    c.execute('''CREATE TABLE IF NOT EXISTS errors (id INTEGER PRIMARY KEY AUTOINCREMENT, description TEXT)''')
-    st.title('Formularz zgłaszania błędów')
+c.execute('''CREATE TABLE IF NOT EXISTS errors (id INTEGER PRIMARY KEY AUTOINCREMENT, description TEXT)''')
+st.title('Formularz zgłaszania błędów')
 
 error_description = st.text_area('Opis błędu')
 
