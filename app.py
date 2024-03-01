@@ -21,22 +21,33 @@ st.write('APP')
 st.header('Tytul')
 
 #POŁĄCZENIE Z BAZĄ DANYCH
+# Połączenie z bazą danych SQLite3
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
-c.execute('''CREATE TABLE IF NOT EXISTS errors (id INTEGER PRIMARY KEY AUTOINCREMENT, description TEXT)''')
+
+# Utworzenie tabeli errors, jeśli nie istnieje
+c.execute('''CREATE TABLE IF NOT EXISTS errors
+             (id INTEGER PRIMARY KEY AUTOINCREMENT, error_description TEXT)''')
+
+# Dodanie formularza zgłaszania błędów
 st.title('Formularz zgłaszania błędów')
 
 error_description = st.text_area('Opis błędu')
 
-if st.button('Zgłoś błąd'):
-    c.execute('INSERT INTO errors (description) VALUES (?)', (error_description,)) 
-    conn.commit() 
-    st.success('Błąd został zgłoszony')
+if st.button('Zgłoś błąd') and error_description:
+    c.execute(f"INSERT INTO errors (error_description) VALUES ('{error_description}')")
+    conn.commit()
+    st.success('Błąd został pomyślnie zgłoszony!')
 
-if st.button('Pokaż błędy'): 
-    errors = c.execute('SELECT * FROM errors').fetchall() 
-    errors_list = [error[1] for error in errors] 
-    st.write('Błędy zgłoszone przez użytkowników:') 
-    st.table(errors_list)
+# Dodanie przycisku do wyświetlania błędów
+if st.button('Wyświetl zgłoszone błędy'):
+    errors = c.execute('SELECT * FROM errors').fetchall()
+    if errors:
+        st.write('Zgłoszone błędy:')
+        for error in errors:
+            st.write(f'- {error[1]}')
+    else:
+        st.write('Brak zgłoszonych błędów')
 
+# Zamykanie połączenia z bazą danych
 conn.close()
