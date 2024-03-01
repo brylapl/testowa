@@ -22,34 +22,19 @@ st.header('Tytul')
 
 #POŁĄCZENIE Z BAZĄ DANYCH
 conn = sqlite3.connect('soccer.db')
-try:
-    c = conn.cursor()
-    st.write('połączono') 
-except:
-    st.write('błąd') 
-# Wykonanie zapytania SQL
-btn = st.button('start')
+c.execute('''CREATE TABLE IF NOT EXISTS errors (id INTEGER PRIMARY KEY AUTOINCREMENT, description TEXT)''')
+st.title('Formularz zgłaszania błędów')
 
-if btn:
-# Pobranie unikalnych połączeń dwóch kolumn
-    c.execute('SELECT DISTINCT KRAJ, LIGA FROM list_teams')
-    rows = c.fetchall()
-    unique_values = {}
-    for row in rows:
-        country = row[0]
-        city = row[1]
-    
-    if country not in unique_values:
-        unique_values[country] = [city]
-    else:
-        unique_values[country].append(city)
-        
-      
-for country, cities in unique_values.items():
-    st.write(country)
-for city in cities:
-    st.write(f"- {city}")
-   
+error_description = st.text_area('Opis błędu')
 
-# Zakończenie połączenia
-#conn.close()
+if st.button('Zgłoś błąd'):
+    c.execute('INSERT INTO errors (description) VALUES (?)', (error_description,)) 
+    conn.commit() st.success('Błąd został zgłoszony')
+
+if st.button('Pokaż błędy'): 
+    errors = c.execute('SELECT * FROM errors').fetchall() 
+    errors_list = [error[1] for error in errors] 
+    st.write('Błędy zgłoszone przez użytkowników:') 
+    st.write(errors_list)
+
+conn.close()
