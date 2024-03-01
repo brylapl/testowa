@@ -35,7 +35,7 @@ if btn:
     c.execute('SELECT DISTINCT KRAJ, LIGA FROM list_teams')
     rows = c.fetchall()
     unique_values = {}
-    for row in data:
+    for row in rows:
         country = row[0]
         city = row[1]
     
