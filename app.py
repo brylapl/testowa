@@ -31,29 +31,25 @@ except:
 btn = st.button('start')
 
 if btn:
-    # Pobranie unikalnych połączeń dwóch kolumn
+# Pobranie unikalnych połączeń dwóch kolumn
     c.execute('SELECT DISTINCT KRAJ, LIGA FROM list_teams')
     rows = c.fetchall()
     unique_values = {}
     for row in data:
         country = row[0]
         city = row[1]
+    
+    if country not in unique_values:
+        unique_values[country] = [city]
+    else:
+        unique_values[country].append(city)
         
-        if country not in unique_values:
-            unique_values[country] = [city]
-        else:
-            unique_values[country].append(city)
-            
-          
-    for country, cities in unique_values.items():
-        st.write(country)
-    for city in cities:
-        st.write(f"- {city}")
-    #st.markdown(html_list,unsafe_allow_html=True)
-
-# Zapisanie do pliku html
-#with open("lista.html", "w") as file:
-    #file.write(html_list)
+      
+for country, cities in unique_values.items():
+    st.write(country)
+for city in cities:
+    st.write(f"- {city}")
+   
 
 # Zakończenie połączenia
 #conn.close()
