@@ -20,34 +20,34 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-#POŁĄCZENIE Z BAZĄ DANYCH
-# Połączenie z bazą danych SQLite3
-conn = sqlite3.connect('soccer.db')
+import streamlit as st
+import sqlite3
+from datetime import datetime
+
+# Tworzenie bazy danych SQLite
+conn = sqlite3.connect('errors.db')
 c = conn.cursor()
+c.execute('''CREATE TABLE IF NOT EXISTS errors 
+             (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+              error_text TEXT, 
+              error_date TEXT)''')
 
-# Utworzenie tabeli errors, jeśli nie istnieje
-c.execute('''CREATE TABLE IF NOT EXISTS errors
-             (id INTEGER PRIMARY KEY AUTOINCREMENT, error_description TEXT)''')
+# Formularz zgłaszania błędów
+st.write("# Formularz zgłaszania błędów")
 
-# Dodanie formularza zgłaszania błędów
-st.title('Formularz zgłaszania błędów')
-
-error_description = st.text_area('Opis błędu')
-
-if st.button('Zgłoś błąd') and error_description:
-    c.execute(f"INSERT INTO errors (error_description) VALUES ('{error_description}')")
+error_text = st.text_area("Opisz znaleziony błąd:")
+if st.button("Zgłoś"):
+    error_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    c.execute("INSERT INTO errors (error_text, error_date) VALUES (?, ?)", (error_text, error_date))
     conn.commit()
-    st.success('Błąd został pomyślnie zgłoszony!')
+    st.success("Błąd został zgłoszony pomyślnie!")
 
-# Dodanie przycisku do wyświetlania błędów
-if st.button('Wyświetl zgłoszone błędy'):
-    errors = c.execute('SELECT * FROM errors').fetchall()
-    if errors:
-        st.write('Zgłoszone błędy:')
-        for error in errors:
-            st.write(f'- {error[1]}')
-    else:
-        st.write('Brak zgłoszonych błędów')
+# Wyświetlanie błędów z bazy danych
+st.write("# Lista zgłoszonych błędów")
+if st.button("Pokaż błędy"):
+    errors = c.execute("SELECT * FROM errors").fetchall()
+    for error in errors:
+        st.write(f"ID: {error[0]}, Opis błędu: {error[1]}, Data zgłoszenia: {error[2]}")
 
-# Zamykanie połączenia z bazą danych
 conn.close()
+
