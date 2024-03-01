@@ -29,7 +29,8 @@ error_description = st.text_area('Opis błędu')
 
 if st.button('Zgłoś błąd'):
     c.execute('INSERT INTO errors (description) VALUES (?)', (error_description,)) 
-    conn.commit() st.success('Błąd został zgłoszony')
+    conn.commit() 
+    st.success('Błąd został zgłoszony')
 
 if st.button('Pokaż błędy'): 
     errors = c.execute('SELECT * FROM errors').fetchall() 
