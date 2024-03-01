@@ -38,6 +38,6 @@ if st.button('Pokaż błędy'):
     errors = c.execute('SELECT * FROM errors').fetchall() 
     errors_list = [error[1] for error in errors] 
     st.write('Błędy zgłoszone przez użytkowników:') 
-    st.write(errors_list)
+    st.table(errors_list)
 
 conn.close()
