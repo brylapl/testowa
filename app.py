@@ -46,11 +46,8 @@ if st.button("Zgłoś"):
 st.write("# Lista zgłoszonych błędów")
 if st.button("Pokaż błędy"):
     errors = c.execute("SELECT * FROM errors").fetchall()
-    if errors:
-        for error in errors:
-            st.table(errors)
-    else:
-        st.write('Brak zgłoszonych błędów')
+    for error in errors:
+        st.write(f"ID: {error[0]}, Opis błędu: {error[1]}, Data zgłoszenia: {error[2]}")
 
 conn.close()
 
