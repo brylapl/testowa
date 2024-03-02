@@ -20,5 +20,5 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-st.markdown('<img src="./pl.svg" alt="brak"></img>',unsafe_allow_html=True)
+st.markdown('<img src="./testowa/pl.svg" alt=""></img>',unsafe_allow_html=True)
 
