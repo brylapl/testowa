@@ -20,5 +20,8 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-
-st.markdown('<img src="https://flagcdn.com/w20/af.png">',unsafe_allow_html=True)
+conn = sqlite3.connect('soccer.db')
+c = conn.cursor()
+if st.button('Start'):
+  for row in c.execute(f'SELECT * FROM flagi'):
+    st.write(row)
