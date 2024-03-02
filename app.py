@@ -26,6 +26,6 @@ name = st.text_input('Wybierz kraj')
 if name != '':
   if st.button('Start'):
     for row in c.execute(f'''SELECT kraj FROM flagi 
-                             WHERE url = ? (name,) 
+                             WHERE src = {name} 
     '''):
       st.write(row)
