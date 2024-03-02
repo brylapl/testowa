@@ -22,9 +22,9 @@ st.write('APP')
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
 name = st.text_input('Wybierz kraj')
-
+wzor = 'https://flagcdn.com/16x12/'
 if name != '':
   if st.button('Start'):
-    for row in c.execute(f'''SELECT kraj FROM flagi 
+    for row in c.execute(f'''SELECT url FROM flagi 
                              WHERE src = "{name}" '''):
-                               st.write(row)
+                               st.markdown(f'<img src="{wzor}url.png"')
