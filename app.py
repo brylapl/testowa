@@ -27,4 +27,4 @@ if name != '':
   if st.button('Start'):
     for row in c.execute(f'''SELECT url FROM flagi 
                              WHERE src = "{name}" '''):
-                               st.markdown(f'<img src="{wzor}url.png"')
+                               st.markdown(f'<img src="{wzor}url.png"',unsafe_allow_html=True)
