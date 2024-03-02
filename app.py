@@ -21,4 +21,4 @@ st.write('APP')
 st.header('Tytul')
 
 
-st.markdown('<img src="https://drive.google.com/file/d/183V0BDrtLA6dLmFLvacNuHsfMSPdKHFE/view?usp=sharing">',unsafe_allow_html=True)
+st.markdown('<img src="https://drive.google.com/file/d/1N1iRnAeKPbAlU37dT-_-6-p9sfRjo_EX/view?usp=drive_link">',unsafe_allow_html=True)
