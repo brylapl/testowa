@@ -21,4 +21,4 @@ st.write('APP')
 st.header('Tytul')
 
 
-st.markdown('<img src="https://cdn.simplelocalize.io/public/v1/flags/gb.svg" height="20">',unsafe_allow_html=True)
+st.markdown('<img src="https://drive.google.com/file/d/183V0BDrtLA6dLmFLvacNuHsfMSPdKHFE/view?usp=sharing">',unsafe_allow_html=True)
