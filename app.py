@@ -20,4 +20,4 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-st.markdown('<img src="/pl.svg" alt="brak">',unsafe_allow_html=True)
+st.markdown('<img src="pl.svg" alt="brak">',unsafe_allow_html=True)
