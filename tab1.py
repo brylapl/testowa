@@ -1,5 +1,5 @@
 import streamlit as st
-def tab1():
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-    st.write('PLIK TESTOWY')
+
+def show_tab1():
+    st.title("Zakładka 1")
+    st.write("To jest zawartość zakładki 1")
