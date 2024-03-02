@@ -16,15 +16,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from tab1 import tab1
 
 st.write('APP')
 
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
-name = st.text_input('Wybierz kraj')
-wzor = 'https://flagcdn.com/16x12/'
-if name != '':
-  if st.button('Start'):
-    for row in c.execute(f'''SELECT url FROM flagi 
-                             WHERE src = "{name}" '''):
-                               st.write(f'https://flagcdn.com/16x12/{row[0]}.png')
+tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+
+with tab1:
+   st.header("A cat")
+   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+
+with tab2:
+   st.header("A dog")
+   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+with tab3:
+   st.header("An owl")
+   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
