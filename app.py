@@ -21,3 +21,4 @@ st.write('APP')
 st.header('Tytul')
 
 
+st.markdown('<img src="https://flagpedia.net/data/flags/h80/gb.webp" alt="">',unsafe_allow_html=True)
