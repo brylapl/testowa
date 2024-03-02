@@ -1,2 +1,3 @@
 def tab1():
-  st.write('TESTOWY PLIK')
+    st.header("An owl")
+    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
