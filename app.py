@@ -20,4 +20,4 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-st.markdown("![Alt text](./pl.svg)")
+st.markdown('<img src="pl.svg" alt="brak">')
