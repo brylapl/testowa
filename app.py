@@ -20,17 +20,13 @@ from tab1 import tab1
 
 st.write('APP')
 
-conn = sqlite3.connect('soccer.db')
-c = conn.cursor()
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+from tab1 import show_tab1
+from tab2 import show_tab2
 
-with tab1:
-   st.header("A cat")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+# Tworzenie zakładek
+tabs = st.radio("Wybierz zakładkę:", ["Tab1", "Tab2"])
 
-with tab2:
-   st.header("A dog")
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
-
-with tab3:
-   tab1()
+if tabs == "Tab1":
+    show_tab1()
+elif tabs == "Tab2":
+    show_tab2()
