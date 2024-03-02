@@ -20,5 +20,5 @@ from time import sleep
 st.write('APP')
 st.header('Tytul')
 
-st.markdown('<img src="/au.jpg" alt=""></img>',unsafe_allow_html=True)
+st.markdown('<img src="./au.jpg" alt=""',unsafe_allow_html=True)
 
