@@ -21,4 +21,4 @@ st.write('APP')
 st.header('Tytul')
 
 
-st.markdown('<img src="https://flagpedia.net/data/flags/h80/gb.webp" alt="" height="20">',unsafe_allow_html=True)
+st.markdown('<img src="https://cdn.simplelocalize.io/public/v1/flags/gb.svg">',unsafe_allow_html=True)
