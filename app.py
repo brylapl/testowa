@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
-from tab1 import tab1
+from tab1 import tab1 as TEST
 
 st.write('APP')
 
@@ -33,5 +33,4 @@ with tab2:
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 
 with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   TEST()
