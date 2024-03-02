@@ -21,4 +21,4 @@ st.write('APP')
 st.header('Tytul')
 
 
-st.markdown('<img src="https://flagcdn.com/w20/af.png"',unsafe_allow_html=True)
+st.markdown('<img src="https://flagcdn.com/w20/af.png">',unsafe_allow_html=True)
