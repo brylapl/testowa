@@ -22,6 +22,7 @@ st.write('APP')
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
 name = st.text_input('Wybierz kraj')
+
 if name != '':
   if st.button('Start'):
     for row in c.execute(f'''SELECT kraj FROM flagi 
