@@ -15,17 +15,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-st.write('APP')
-
 from tab1 import show_tab1
 from tab2 import show_tab2
 
+st.write('APP')
 
-tabs = st.radio("Wybierz zakładkę:", ["Tab1", "Tab2"])
+tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
-if tabs == "Tab1":
+with tab1:
     show_tab1()
-elif tabs == "Tab2":
+   
+with tab2:
     show_tab2()
+
