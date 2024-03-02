@@ -18,7 +18,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 st.write('APP')
-st.header('Tytul')
 
 conn = sqlite3.connect('soccer.db')
 c = conn.cursor()
