@@ -40,7 +40,6 @@ def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul,power=False):
 
     html += "</table>\n"
     html += "</div>"
-    return html
 
 
     
