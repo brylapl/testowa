@@ -14,6 +14,7 @@ def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
         
     st.write(f'{len(list1)} {len(list2)}')
     st.write(len(flagi_home))
+    html = "<div class='container mw-100'>\n"
     
 
 
