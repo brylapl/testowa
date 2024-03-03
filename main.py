@@ -22,7 +22,7 @@ import funkcja
 win = [1.50,3.65,4.50]
 		
 
-x = funkcja.glowna()
+x = funkcja.glowna(win)
 st.write(x)
 
 
