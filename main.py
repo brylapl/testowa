@@ -36,7 +36,7 @@ with tab3:
     soccerrating_home_name = 'AS MONACO'
     st.write('WYWOŁANA FUNKCJĄ ZEWNĘTRZNĄ')
     
-    x = sklady_wyjsciowe(lista1,lista2,flagi_home,flagi_away,'TITLE')
+    x = tabele.sklady_wyjsciowe(lista1,lista2,flagi_home,flagi_away,'TITLE')
     st.write(x)
     
 
