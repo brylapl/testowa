@@ -1,6 +1,7 @@
 import streamlit as st
 
 def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
+    global nazwa 
     max_len = max(len(list1), len(list2))
     min_len = min(len(list1), len(list2))
     st.write(max_len, 'vs' ,min_len)
@@ -12,7 +13,7 @@ def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
         list2 += [''] * (max_len - min_len)
         flagi_away += [''] * (max_len - min_len)
     
-    global nazwa    
+       
     st.write(f'{len(list1)} {len(list2)}')
     st.write(len(flagi_home))
     html = "<div class='container mw-100'>\n"
