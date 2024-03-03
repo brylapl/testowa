@@ -25,8 +25,7 @@ soccerrating_away_name = 'Chelsea'
 lista1 = [i for i in range(5)]
 lista2 = [j for j in range(8)]
 st.write('test')
-f = html(lista1,lista2,'Tytul',soccerrating_home_name,soccerrating_away_name)
-st.write(f)
+
 
 
 
