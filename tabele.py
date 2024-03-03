@@ -1,6 +1,6 @@
 import streamlit as st
-global druzyna
-def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
+
+def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul,druzyna):
     global druzyna 
     max_len = max(len(list1), len(list2))
     min_len = min(len(list1), len(list2))
