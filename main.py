@@ -23,7 +23,7 @@ lista1 = [1,2,3,4,5]
 lista2 = [10,11,12]
 flagi_home = ['f1','f2','f3','f4','f5']
 flagi_away = ['f10','f11','f12']
-nazwa = 'GLOBALNA NAZWA'
+druzyna = 'GLOBALNA NAZWA'
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
