@@ -1,54 +1,14 @@
-#-----—----------—------------------------------
-#TABELA DO WYŚWIETLENIA KURSÓW 
-#-----------------------------------------------
+def A(imie):
+    return f'Imie to {imie}'
 
+def B(nazwisko):
+    return f'Nazwisko to {nazwisko}'
 
-def tytul(name):
-    th = f'''<tr>\n<th class='bg-dark text-white fw-bold h2' colspan="3">{name}</th>\n</tr>\n'''
-    return th
-    
-def rodzaj(*args):
-            th = f'''<tr>\n<th class='bg-dark text-white fw-bold'>{args[0]}</th>\n<th class='bg-dark text-white fw-bold'>{args[1]}</th>\n<th class='bg-dark text-white fw-bold'>{args[2]}</th>\n</tr>\n'''
-            return th
+def C(kraj):
+    return f'Kraj to {kraj}'
 
-def dane(*kurs):
-    for i in range(len(kurs)):
-               t = f'''<tr>\n<td>{kurs[0][0]}</td>\n<td class='bg-dark text-white fw-bold'>{kurs[0][1]}</td>\n<td>{kurs[0][2]}</td>\n</tr>\n'''
-             
-    return t
-              
-               
-
-def tabela_kursy():
-    t = '<div class="container">\n'
-    t += '<table class="table table-striped text-center table-dark">\n'
-    t += '''<tr>\n<th class='bg-dark text-white fw-bold' colspan="3">Oczekiwane kursy</th>\n</tr>\n'''
-    t += tytul('Regulaminowy czas')
-    t += rodzaj('1','X','2')
-    t += dane(win)
-    t += tytul('Podwójna szansa')
-    t += rodzaj('1X','12','X2')
-    t += dane(dc)
-    t += tytul('Gole')
-    t += rodzaj('Over','Linia','Under')
-    t += dane(gole0)
-    t += dane(gole1)
-    t += dane(gole2)
-    t += dane(gole3)
-    t += dane(gole4)
-    t += tytul('DNB')
-    t += rodzaj('Home','','Away')
-    t += dane(dnb)
-    t += tytul('Obie strzelą')
-    t += rodzaj('Tak','','Nie')
-    t += dane(bts)
-    t += tytul('Gole gospodarzy')
-    t += rodzaj('Over','','Under')
-    t += dane(home0)
-    t += dane(home1)
-    t += tytul('Gole gości')
-    t += rodzaj('Over','','Under')
-    t += dane(away0)
-    t += dane(away1)
-    t += '</div>'
-    return t
+def pokaz():
+    a = A('Tom')
+    b = B('H')
+    c = C('Poland)
+    return f'Calosc to {a}-{b}-{c}'
