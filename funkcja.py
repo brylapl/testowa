@@ -1,5 +1,5 @@
 def tytul(name):
-	th = f'''<tr>\n<th class='bg-dark text-white fw-bold h2 text-primary' colspan="3">{name}</th>\n</tr>\n'''
+	th = f'''<tr>\n<th class='bg-dark fw-bold h3 text-primary' colspan="3">{name}</th>\n</tr>\n'''
 	return th
 
 def rodzaj(*args):
