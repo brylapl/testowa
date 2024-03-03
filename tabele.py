@@ -1,5 +1,6 @@
 zmienna = 500
 
 def pokaz():
-    x = f'nazwa to {global name}'
+    global name
+    x = f'nazwa to'
     return x
