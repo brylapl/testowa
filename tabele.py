@@ -1,6 +1,6 @@
 import streamlit as st
 
-def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul,power=False):
+def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
     max_len = max(len(list1), len(list2))
     min_len = min(len(list1), len(list2))
     st.write(max_len, 'vs' ,min_len)
@@ -23,15 +23,7 @@ def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul,power=False):
     html += f"<th class='bg-dark text-white fw-bold' colspan='2'>HOME NAME</th>\n"
     html += f"<th class='bg-dark text-white fw-bold' colspan='2'>AWAY NAME}</th>\n"
     html += "</tr>\n"
-    if power:
-        html += "<tr>\n"
-        html += f"<th class='bg-dark text-white fw-bold' colspan='2'>STATS HOME</th>\n"
-        html += f"<th class='bg-dark text-white fw-bold' colspan='2'>STATS AWAY</th>\n"
-        html += "</tr>\n"
     for i in range(max_len):
-        # flaga = flagi_home[i].split('/')[-1]
-        # flaga = flaga.split('.')[0]
-        # flaga = f'/content/{flaga}.svg'
         html += "<tr>\n"
         html += f"<td><img src='{flagi_home[i]}' alt=''</img></td><td>{list1[i]}</td>\n"
 
