@@ -1,3 +1,4 @@
+import sqlite3
 def pokaz():
 	conn = sqlite3.connect('soccer.db')
 	c = conn.cursor()
