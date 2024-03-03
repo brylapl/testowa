@@ -22,17 +22,17 @@ import funkcja
 
 win = [1,2,3]
 dc = [1,2,3]
-gole0 = ['0.5']
-gole1 = ['1.5']
-gole2 = ['2.5']
-gole3 = ['3.5']
-gole4 = ['4.5']
-dnb = ['AH0']
-bts = ['']
-home0 = ['0.5']
-home1 = ['1.5']
-away0 = ['0.5']
-away1 = ['1.5']
+gole0 = [1,'0.5',2]
+gole1 = [1,'1.5']
+gole2 = [1,'2.5']
+gole3 = [1,'3.5']
+gole4 = [1,'4.5']
+dnb = [1,'AH0',2]
+bts = [1,'',2]
+home0 = [1,'0.5',2]
+home1 = [1,'1.5',2]
+away0 = [1,'0.5',2]
+away1 = [1,'1.5',2]
 		
 
 x = funkcja.glowna(win,dc,gole0,gole1,gole2,gole3,gole4,dnb,bts,home0,home1,away0,away1)
