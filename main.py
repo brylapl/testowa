@@ -21,7 +21,7 @@ st.write('APP')
 name = 'APLIKACJA'
 
 st.write(tabele.pokaz())
-st.write(globals())
+st.write(tabele.pokaz())
 
 
 
