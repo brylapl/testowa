@@ -15,16 +15,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from tabele import html
-
+import tabele
 st.write('APP')
 
-soccerrating_home_name = 'Arsenal'
-soccerrating_away_name = 'Chelsea'
-
-lista1 = [i for i in range(5)]
-lista2 = [j for j in range(8)]
-st.write('test')
 
 
 
