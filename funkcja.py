@@ -12,7 +12,7 @@ def dane(*kurs):
         return t
 
 
-def glowna():
+def glowna(win):
     t = '<div class="container">\n'
     t += '<table class="table table-striped text-center table-dark">\n'
     t += '''<tr>\n<th class='bg-dark text-white fw-bold' colspan="3">Oczekiwane kursy</th>\n</tr>\n'''
