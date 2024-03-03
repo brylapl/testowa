@@ -20,7 +20,7 @@ import tabele
 st.write('APP')
 name = 'APLIKACJA'
 
-st.write(tabele)
+st.write(tabele.zmienna)
 
 
 
