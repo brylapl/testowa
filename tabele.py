@@ -1,2 +1,4 @@
 def zmienna():
-    return 1_000_000
+    global name
+    x = f'Wybrna nazwa {name}'
+    return x
