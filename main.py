@@ -19,11 +19,24 @@ import funkcja
 
 #------------------------ TABELA NA KURSY
 		
-win = [1.50,3.65,4.50]
+
+win = [1,2,3]
+dc = [1.20,1.35,1.89]
+gole0 = [1.55,'0.5',2.8]
+gole1 = [1,'1.5',3]
+gole2 = [5,'2.5',4]
+gole3 = [6,'3.5',8]
+gole4 = [1,'4.5',2]
+dnb = [1.50,'AH0',2.40]
+bts = ['2.0,1.90']
+home0 = [1,'0.5',2]
+home1 = [1,'1.5',3]
+away0 = [4,'0.5',6]
+away1 = [5,'1.5',7]
 		
 
-x = funkcja.glowna(win)
-st.write(x)
+st.write(funkcja.glowna(win,dc,gole0,gole1,gole2,gole3,gole4,dnb,bts,home0,home1,away0,away1))
+
 
 
 
