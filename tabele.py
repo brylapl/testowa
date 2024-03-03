@@ -20,8 +20,6 @@ def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
     html += "<table class='table table-responsive table-striped text-center table-dark table-sm'>\n"
     html += f"<tr><th class='fw-bold' colspan='4'>{tytul}</th></tr>"
     html += f"<tr><th class='fw-bold' colspan='4'>{nazwa}</th></tr>"
-    
-    return html
 
 
     
