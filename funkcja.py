@@ -26,3 +26,4 @@ def pokaz():
 	        BESOCCER = row[5]
 	        FOOTYSTATS = row[6]
 	        SOCCERRATING = row[7]
+            return APWIN,MAKEYOURSTATS,BESOCCER,FOOTYSTATS,SOCCERRATING
