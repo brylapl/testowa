@@ -23,7 +23,7 @@ lista1 = [1,2,3,4,5]
 lista2 = [10,11,12]
 flagi_home = ['f1','f2','f3','f4','f5']
 flagi_away = ['f10','f11','f12']
-soccerrating_home_name = 'AS MONACO'
+
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
@@ -33,6 +33,7 @@ with tab2:
     st.header('Jakias druga')
 
 with tab3:
+    soccerrating_home_name = 'AS MONACO'
     st.write('WYWOŁANA FUNKCJĄ ZEWNĘTRZNĄ')
     
     x = sklady_wyjsciowe(lista1,lista2,flagi_home,flagi_away,'TITLE')
