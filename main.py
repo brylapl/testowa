@@ -18,6 +18,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import tabele
 st.write('APP')
 
+st.write(tabele.pokaz())
+
 
 
 
