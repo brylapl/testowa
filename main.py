@@ -19,6 +19,9 @@ from tabele import html
 
 st.write('APP')
 
+soccerrating_home_name = 'Arsenal'
+soccerrating_away_name = 'Chelsea'
+
 lista1 = [i for i in range(5)]
 lista2 = [j for j in range(8)]
 st.write('test')
