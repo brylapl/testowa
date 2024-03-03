@@ -1,5 +1,5 @@
 import streamlit as st
-druzyna = 'test'
+global druzyna
 def sklady_wyjsciowe(list1,list2,flagi_home,flagi_away,tytul):
     global druzyna 
     max_len = max(len(list1), len(list2))
