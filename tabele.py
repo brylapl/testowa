@@ -1,4 +1,5 @@
 zmienna = 500
-global name 
 
-imie = name
+def pokaz():
+    global name
+    x = f'nazwa to {name}'
