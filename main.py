@@ -29,5 +29,6 @@ with tab2:
 
 with tab3:
     st.write('WYWOŁANA FUNKCJĄ ZEWNĘTRZNĄ')
+    sklady_wyjsciowe()
     
 
