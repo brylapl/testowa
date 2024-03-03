@@ -35,7 +35,8 @@ away0 = [4,'0.5',6]
 away1 = [5,'1.5',7]
 		
 
-st.write(funkcja.glowna(win,dc,gole0,gole1,gole2,gole3,gole4,dnb,bts,home0,home1,away0,away1))
+x = funkcja.glowna(win,dc,gole0,gole1,gole2,gole3,gole4,dnb,bts,home0,home1,away0,away1)
+st.write(x)
 
 
 
