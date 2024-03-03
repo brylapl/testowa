@@ -19,6 +19,8 @@ from tabele import sklady_wyjsciowe
 
 st.write('APP')
 
+lista = [1,2,3,4,5]
+
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
@@ -29,6 +31,7 @@ with tab2:
 
 with tab3:
     st.write('WYWOŁANA FUNKCJĄ ZEWNĘTRZNĄ')
-    sklady_wyjsciowe('TYTUŁ JAKO PARAMETR')
+    
+    sklady_wyjsciowe(lista)
     
 
