@@ -34,6 +34,6 @@ with tab2:
 with tab3:
     st.write('WYWOŁANA FUNKCJĄ ZEWNĘTRZNĄ')
     
-    sklady_wyjsciowe(lista1,lista2,flagi_home,flagi_away)
+    sklady_wyjsciowe(lista1,lista2,flagi_home,flagi_away,'TITLE')
     
 
