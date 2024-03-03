@@ -1,4 +1,4 @@
-def html(list1, list2,tytul):
+def html(list1, list2,tytul,soccerrating_home_name,soccerrating_away_name):
     max_len = max(len(list1), len(list2))
     min_len = min(len(list1), len(list2))
 
