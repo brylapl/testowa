@@ -12,13 +12,36 @@ def dane(*kurs):
         return t
 
 
-def glowna(win):
-    t = '<div class="container">\n'
-    t += '<table class="table table-striped text-center table-dark">\n'
-    t += '''<tr>\n<th class='bg-dark text-white fw-bold' colspan="3">Oczekiwane kursy</th>\n</tr>\n'''
-    t = tytul('Regulaminowy czas')
-    t += rodzaj('1','X','2')
-    t += dane(win)
-    t += tytul('Podwójna szansa')
-    t += rodzaj('1X','12','X2')
-    return t
+def tabela_kursy(win,dc,gole0,gole1,gole2,gole3,gole4,dnb,bts,home0,home1,away0,away1):
+	t = '<div class="container">\n'
+	t += '<table class="table table-striped text-center table-dark">\n'
+	t += '''<tr>\n<th class='bg-dark text-white fw-bold' colspan="3">Oczekiwane kursy</th>\n</tr>\n'''
+	t += tytul('Regulaminowy czas')
+	t += rodzaj('1','X','2')
+	t += dane(win)
+	t += tytul('Podwójna szansa')
+	t += rodzaj('1X','12','X2')
+	t += dane(dc)
+	t += tytul('Gole')
+	t += rodzaj('Over','Linia','Under')
+	t += dane(gole0)
+	t += dane(gole1)
+	t += dane(gole2)
+	t += dane(gole3)
+	t += dane(gole4)
+	t += tytul('DNB')
+	t += rodzaj('Home','','Away')
+	t += dane(dnb)
+	t += tytul('Obie strzelą')
+	t += rodzaj('Tak','','Nie')
+	t += dane(bts)
+	t += tytul('Gole gospodarzy')
+	t += rodzaj('Over','','Under')
+	t += dane(home0)
+	t += dane(home1)
+	t += tytul('Gole gości')
+	t += rodzaj('Over','','Under')
+	t += dane(away0)
+	t += dane(away1)
+	t += '</div>'
+	return t
