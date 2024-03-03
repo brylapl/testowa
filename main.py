@@ -18,7 +18,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from tabele import zmienna
 
 st.write('APP')
-st.write(zmienna)
+st.write(zmienna())
 
 
 
