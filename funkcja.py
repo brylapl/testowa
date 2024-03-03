@@ -3,7 +3,7 @@ def tytul(name):
 	return th
 
 def rodzaj(*args):
-    th = f'''<tr>\n<th class='bg-dark text-danger h4'>{args[0]}</th>\n<th class='bg-dark text-white fw-bold'>{args[1]}</th>\n<th class='bg-dark text-white fw-bold'>{args[2]}</th>\n</tr>\n'''
+    th = f'''<tr>\n<th class='bg-dark text-danger h4'>{args[0]}</th>\n<th class='bg-dark text-danger h4'>{args[1]}</th>\n<th class='bg-dark text-danger h4'>{args[2]}</th>\n</tr>\n'''
     return th
 
 def dane(*kurs):
