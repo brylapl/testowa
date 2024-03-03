@@ -1,4 +1,5 @@
 import sqlite3
+import streamlit as st
 def pokaz():
 	conn = sqlite3.connect('soccer.db')
 	c = conn.cursor()
