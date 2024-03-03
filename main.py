@@ -15,13 +15,15 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import tabele
+from tabele import html
 
 st.write('APP')
-name = 'APLIKACJA'
 
-st.write(tabele.pokaz())
-st.write(tabele.pokaz())
+lista1 = [i for i in range(5)]
+lista2 = [j for j in range(8)]
+
+st.write(html())
+
 
 
 
