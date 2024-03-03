@@ -5,12 +5,12 @@ def html(list1, list2,tytul):
     # dodanie pustych wartości do krótszej listy
     if len(list1) < max_len:
         list1 += [''] * (max_len - min_len)
-        flagi_home += [''] * (max_len - min_len)
+
 
 
     elif len(list2) < max_len:
         list2 += [''] * (max_len - min_len)
-        flagi_away += [''] * (max_len - min_len)
+
 
 
     # tworzenie tabeli HTML
