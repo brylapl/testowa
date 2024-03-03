@@ -15,12 +15,13 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from tabele import zmienna
+import tabele
 
 st.write('APP')
 name = 'APLIKACJA'
 
-st.write(zmienna.zmienna())
+st.write(tabele)
+
 
 
 
