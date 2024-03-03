@@ -22,7 +22,8 @@ st.write('APP')
 lista1 = [i for i in range(5)]
 lista2 = [j for j in range(8)]
 st.write('test')
-st.write(html())
+f = html(lista1,lista2,'Tytul')
+st.write(f)
 
 
 
