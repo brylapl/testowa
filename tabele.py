@@ -10,6 +10,6 @@ def sklady_wyjsciowe(list1,list2):
     
     elif len(list2) < max_len:
         list2 += [''] * (max_len - min_len)
-		
+			
 	st.write(max_len, 'vs' ,min_len)
     
