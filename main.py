@@ -17,6 +17,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import funkcja
 
+#------------------------ TABELA NA KURSY
+		
+win = [1.50,3.65,4.50]
+		
+
 x = funkcja.glowna()
 st.write(x)
 
