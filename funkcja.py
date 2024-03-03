@@ -18,4 +18,7 @@ def glowna():
     t += '''<tr>\n<th class='bg-dark text-white fw-bold' colspan="3">Oczekiwane kursy</th>\n</tr>\n'''
     t = tytul('Regulaminowy czas')
     t += rodzaj('1','X','2')
+    t += dane(win)
+    t += tytul('Podwójna szansa')
+    t += rodzaj('1X','12','X2')
     return t
