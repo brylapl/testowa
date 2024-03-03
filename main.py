@@ -17,6 +17,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import funkcja
 
+x = funkcja()
+st.write(x)
+
 
 
 
