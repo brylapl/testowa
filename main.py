@@ -18,9 +18,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import funkcja
 
 #------------------------ TABELA NA KURSY
-from reportlab.pdfgen import canvas
-from io import BytesIO
-
 # Tworzenie tabeli HTML
 data = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}
 table = '<table><tr><th>col1</th><th>col2</th></tr>'
