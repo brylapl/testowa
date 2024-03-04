@@ -35,12 +35,6 @@ password = st.text_input('Podaj hasło:', type='password')
 # Przycisk do pobierania PDF
 if st.button('Pobierz PDF'):
     if password == 'testowe':
-        pdf_io = BytesIO()
-        c = canvas.Canvas(pdf_io)
-        # Generowanie zawartości PDF
-        c.drawString(100, 800, 'Plik PDF wygenerowany na podstawie danych tabeli HTML')
-        c.save()
-        
         # Pobieranie pliku PDF
         st.write('Plik PDF został wygenerowany.')
         st.markdown(f'<a href="data:application/octet-stream;base64,{pdf_io.getvalue().decode("utf-8")}" download="raport.pdf">Pobierz PDF</a>', unsafe_allow_html=True)
