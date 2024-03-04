@@ -271,8 +271,8 @@ with menu0:
 	st.markdown('''<h1 class='fw-bold text-center'>Obliczanie Kursów</h1>''',unsafe_allow_html=True)    
 	team = st.multiselect('Wybierz drużynę', options,placeholder="Wybierz drużynę")
 	if team != '':
-		for t  in team:
-		    for row in c.execute(f'SELECT * FROM list_teams WHERE ID like "{team}"'):
+		for t in team:
+		    for row in c.execute(f'SELECT * FROM list_teams WHERE ID like "{t}"'):
 		        st.markdown(f'''
 		                    <div class="select_team">
 		                        <h3 class="info text-white">Drużyna: 
