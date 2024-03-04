@@ -6,5 +6,4 @@ lxml
 selenium
 seleniumbase
 webdriver-manager
-WeasyPrint
-weasyprint
+reportlab
