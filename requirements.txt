@@ -7,3 +7,4 @@ selenium
 seleniumbase
 webdriver-manager
 WeasyPrint
+weasyprint
