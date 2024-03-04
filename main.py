@@ -34,7 +34,7 @@ if st.button('Pobierz PDF'):
     if password == 'testowe':
         # Pobieranie pliku PDF
         st.write('Plik PDF został wygenerowany.')
-        st.markdown(f'<a href="data:application/octet-stream;base64,{pdf_io.getvalue().decode("utf-8")}" download="raport.pdf">Pobierz PDF</a>', unsafe_allow_html=True)
+        st.markdown(f'{table}', unsafe_allow_html=True)
     else:
         st.warning('Podane hasło jest nieprawidłowe.')
 
