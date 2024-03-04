@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import funkcja
-
+from io import BytesIO
 #------------------------ TABELA NA KURSY
 # Tworzenie tabeli HTML
 data = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}
