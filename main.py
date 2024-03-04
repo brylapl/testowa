@@ -269,7 +269,7 @@ menu0,menu1, menu2= st.tabs(["Home","Obsługiwane ligi","Zgłoś błąd"])
 
 with menu0:
 	st.markdown('''<h1 class='fw-bold text-center'>Obliczanie Kursów</h1>''',unsafe_allow_html=True)    
-	team = st.multiselect('Wybierz drużynę', options,index=None,placeholder="Wybierz drużynę")
+	team = st.multiselect('Wybierz drużynę', options,placeholder="Wybierz drużynę")
 	if team != '':
 	    for row in c.execute(f'SELECT * FROM list_teams WHERE ID like "{team}"'):
 	        st.markdown(f'''
