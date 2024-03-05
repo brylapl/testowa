@@ -33,7 +33,7 @@ st.header('baza danych')
 # Funkcja do wysyłania maila
 def send_email():
     st.text("Sending email...")
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP('smtp.wp.pl',587)
     server.starttls()
     server.login(st.secrets["login"], st.secrets["pass"])
     server.sendmail("srspl@wp.pl", "srspl@wp.pl", "This is a test email")
