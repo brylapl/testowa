@@ -63,4 +63,5 @@ def show_error():
     finally:
         conn.close()
 
-error_report()       
+error_report()      
+show_error()
