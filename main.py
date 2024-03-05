@@ -27,8 +27,3 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
-
-l = st.secrets["haslo"]
-st.write(l)
-
-st.write('Dane ')
