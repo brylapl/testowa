@@ -34,7 +34,13 @@ try:
                   (id INTEGER PRIMARY KEY AUTOINCREMENT, 
                    error_text TEXT, 
                    error_date TEXT)''')
-    st.write('utworzono tabele errors') 
+    st.write('utworzono tabele errors')
+    autocommit = conn.isolation_level is None
+    if autocommit:
+        st.write("Autocommit jest włączony")
+    else:
+        st.write("Autocommit jest wyłączony")
+
 except:
     st.write('nie utworzono errors')
     
