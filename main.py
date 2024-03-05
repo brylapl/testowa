@@ -25,7 +25,7 @@ headers.update({
 })
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
-
+st.header('baza danych')
 
 try:
     conn = sqlite3.connect('soccer.db')
