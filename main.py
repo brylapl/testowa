@@ -25,3 +25,42 @@ headers.update({
 })
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
+
+
+def error_report(): 
+    try:
+        conn = sqlite3.connect('soccer.db')
+        c = conn.cursor()
+        c.execute('''CREATE TABLE IF NOT EXISTS errors 
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                   error_text TEXT, 
+                   error_date TEXT)''')
+        st.write("# Formularz zgłaszania błędów")
+        error_text = st.text_area("Opisz znaleziony błąd:")
+        if st.button("Zgłoś"):
+            error_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            c.execute("INSERT INTO errors (error_text, error_date) VALUES (?, ?)", (error_text, error_date))
+            
+            conn.commit()
+            st.markdown('''<div class="alert alert-success text-center" role="alert">Błąd został zgłoszony pomyślnie!</div>''', unsafe_allow_html=True) 
+    except Exception as e:
+        st.write(f"Wystąpił błąd: {str(e)}")
+    finally:
+        conn.close()
+
+def show_error():
+    try:
+        conn = sqlite3.connect('soccer.db')
+        c = conn.cursor()
+        st.write("# Lista zgłoszonych błędów")
+        if st.button("Pokaż błędy"):
+            errors = c.execute("SELECT * FROM errors").fetchall()
+            for error in errors:
+                st.write(f"ID: {error[0]}, Opis błędu: {error[1]}, Data zgłoszenia: {error[2]}")
+
+    except:
+        st.write('BŁĄD show_error')
+    finally:
+        conn.close()
+
+error_report()       
