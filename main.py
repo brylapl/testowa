@@ -29,6 +29,7 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('baza danych')
 
 l = st.secrets["l"]
+st.write(l)
 p = st.secrets["p"]
 
 # Funkcja do wysyłania maila
