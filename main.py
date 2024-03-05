@@ -28,8 +28,8 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
-l = st.secrets["login"]
-p = st.secrets["pass"]
+l = st.secrets["l"]
+p = st.secrets["p"]
 
 # Funkcja do wysyłania maila
 def send_email():
