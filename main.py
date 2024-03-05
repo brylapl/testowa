@@ -29,7 +29,7 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('baza danych')
 
 # Konfiguracja repozytorium Git
-repo = Repo('/brylapl/testowa')
+repo = Repo('https://github.com/brylapl/testowa')
 assert not repo.bare
 
 try:
