@@ -28,6 +28,10 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
+# Konfiguracja repozytorium Git
+repo = Repo('https://github.com/brylapl/testowa/')
+assert not repo.bare
+
 try:
     conn = sqlite3.connect('soccer.db')
     c = conn.cursor()
@@ -50,6 +54,12 @@ if st.button("Zgłoś"):
     c.execute("INSERT INTO errors (error_text, error_date) VALUES (?, ?)", (error_text, error_date))
     c.execute('COMMIT')
     st.write('zapisano commit') 
+    repo.index.add(['soccer.db'])
+    repo.index.commit('Aktualizacja danych w bazie danych')
+    origin = repo.remote('origin')
+    origin.push()
+    origin.pull()
+    conn.close()
     try:
         
         st.markdown('''<div class="alert alert-success text-center" role="alert">Błąd został zgłoszony pomyślnie!</div>''', unsafe_allow_html=True)
