@@ -51,6 +51,6 @@ def schedule_email():
 # Wywołanie funkcji planowania wysyłania maila
 schedule_email()
 
-st.write('dane')
+st.write('Dane ')
 st.write("DB username:", st.secrets["LOGIN"])
 st.write("DB password:", st.secrets["PASSWORD"])
