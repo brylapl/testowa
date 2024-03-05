@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-import lxml
+import lxml 
 from time import sleep
 import time
 from datetime import datetime
