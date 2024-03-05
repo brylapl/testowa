@@ -44,4 +44,4 @@ if st.button('start'):
     send_email() 
 st.write('Dane ')
 st.write("DB username:", st.secrets["LOGIN"], key="jeden")
-st.write("DB password:", st.secrets["PASSWORD"])
+st.write("DB password:", st.secrets["PASSWORD"], key="dwa")
