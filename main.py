@@ -35,7 +35,7 @@ def send_email():
     st.text("Sending email...")
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(LOGIN, PASSWORD)
+    server.login(st.secrets["LOGIN"], st.secrets["PASSWORD"])
     server.sendmail("srspl@wp.pl", "srspl@wp.pl", "This is a test email")
     server.quit()
     st.text("Email sent successfully")
@@ -43,5 +43,3 @@ def send_email():
 if st.button('start'):
     send_email() 
 st.write('Dane ')
-st.write("DB username:", st.secrets["LOGIN"], key="jeden")
-st.write("DB password:", st.secrets["PASSWORD"], key="dwa")
