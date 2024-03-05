@@ -34,30 +34,23 @@ try:
                   (id INTEGER PRIMARY KEY AUTOINCREMENT, 
                    error_text TEXT, 
                    error_date TEXT)''')
-    st.write('utworzono tabele errors')
-    autocommit = conn.isolation_level is None
-    if autocommit:
-        st.write("Autocommit jest włączony")
-    else:
-        st.write("Autocommit jest wyłączony")
+    st.write('utworzono tabele errors') 
 except:
     st.write('nie utworzono errors')
 
-conn.set_isolation_level(None)
-autocommit = conn.isolation_level is None
-if autocommit:
-    st.write("Autocommit jest włączony")
-else:
-    st.write("Autocommit jest wyłączony")
+
     
         
 st.write("# Formularz zgłaszania błędów")
 error_text = st.text_area("Opisz znaleziony błąd:")
 if st.button("Zgłoś"):
     error_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    c.execute('BEGIN')
     c.execute("INSERT INTO errors (error_text, error_date) VALUES (?, ?)", (error_text, error_date))
+    c.execute('COMMIT')
+    st.write('zapisano commit') 
     try:
-        conn.commit()
+        
         st.markdown('''<div class="alert alert-success text-center" role="alert">Błąd został zgłoszony pomyślnie!</div>''', unsafe_allow_html=True)
         st.write('commit wykonany') 
     except Exception as e:
