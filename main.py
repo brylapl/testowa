@@ -28,14 +28,15 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
-
+l = st.secrets["login"]
+p = st.secrets["pass"]
 
 # Funkcja do wysyłania maila
 def send_email():
     st.text("Sending email...")
     server = smtplib.SMTP('smtp.wp.pl',587)
     server.starttls()
-    server.login(st.secrets["login"], st.secrets["pass"])
+    server.login(l, p)
     server.sendmail("srspl@wp.pl", "srspl@wp.pl", "This is a test email")
     server.quit()
     st.text("Email sent successfully")
