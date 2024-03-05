@@ -36,21 +36,13 @@ def send_email():
     st.text("Sending email...")
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login("your_email@gmail.com", "your_password")
-    server.sendmail("your_email@gmail.com", "recipient_email@gmail.com", "This is a test email")
+    server.login(LOGIN, PASSWORD)
+    server.sendmail("srspl@wp.pl", "srspl@wp.pl", "This is a test email")
     server.quit()
     st.text("Email sent successfully")
 
-# Funkcja do planowania wysyłania maila o ustalonej godzinie
-def schedule_email():
-    schedule.every().day.at("12:00").do(send_email)  # Ustawienie godziny wysyłki maila
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
-
-# Wywołanie funkcji planowania wysyłania maila
-schedule_email()
-
+if st.button('start'):
+    send_email() 
 st.write('Dane ')
 st.write("DB username:", st.secrets["LOGIN"])
 st.write("DB password:", st.secrets["PASSWORD"])
