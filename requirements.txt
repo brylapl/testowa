@@ -6,4 +6,4 @@ lxml
 selenium
 seleniumbase
 webdriver-manager
-schedule
+pip install schedule
