@@ -40,18 +40,15 @@ try:
         st.write("Autocommit jest włączony")
     else:
         st.write("Autocommit jest wyłączony")
-    conn.set_isolation_level(None)
-    autocommit = conn.isolation_level is None
-    if autocommit:
-        st.write("Autocommit jest włączony")
-    else:
-        st.write("Autocommit jest wyłączony")
-    
-
-
-
 except:
     st.write('nie utworzono errors')
+
+conn.set_isolation_level(None)
+autocommit = conn.isolation_level is None
+if autocommit:
+    st.write("Autocommit jest włączony")
+else:
+    st.write("Autocommit jest wyłączony")
     
         
 st.write("# Formularz zgłaszania błędów")
