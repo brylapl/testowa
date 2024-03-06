@@ -6,4 +6,4 @@ lxml
 selenium
 seleniumbase
 webdriver-manager
-pip install schedule
+streamlit-authenticator
