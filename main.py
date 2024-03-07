@@ -25,88 +25,42 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
-
-
-# Panel logowania dla administratora
-login_panel = st.empty()
-password = login_panel.text_input("Hasło", type="password")
-if password == "admin123":  # Tymczasowe hasło dla przykładu
-    is_logged_in = True
-else:
-    is_logged_in = False
-
-# Strona startowa widoczna dla wszystkich
-if not is_logged_in:
-    st.title("Witaj na stronie startowej")
-    st.write("Ta strona jest dostępna dla wszystkich.")
-
-# Panel administracyjny widoczny tylko dla zalogowanego administratora
-if is_logged_in:
-    st.sidebar.title("Panel administracyjny")
-    st.sidebar.write("To jest panel administracyjny dostępny tylko dla administratora.")
-
-    st.title("Panel administracyjny")
-    st.write("Tu znajdziesz narzędzia administracyjne.")
-
-    # Przełącznik do zmiany widoku na stronę startową
-    if st.button("Przełącz na stronę startową"):
-        is_logged_in = False
-
-# Wyświetlanie panelu logowania
-if not is_logged_in:
-    login_panel.empty()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ----------------------------------------------------------------------------------------------
-# # Panel logowania dla administratora
-# def panel_logowania():
-#     st.sidebar.header("Panel logowania")
+# Panel logowania dla administratora
+def panel_logowania():
+    st.sidebar.header("Panel logowania")
     
-#     username = st.sidebar.text_input("Username")
-#     password = st.sidebar.text_input("Password", type="password")
+    username = st.sidebar.text_input("Username")
+    password = st.sidebar.text_input("Password", type="password")
     
-#     if st.sidebar.button("Login"):
-#         if username == "admin" and password == "admin123":
-#             st.sidebar.success("Zalogowano pomyślnie!")
-#             return True
-#         else:
-#             st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
-#             return False
+    if st.sidebar.button("Login"):
+        if username == "admin" and password == "admin123":
+            st.sidebar.success("Zalogowano pomyślnie!")
+            return True
+        else:
+            st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
+            return False
 
-# # Panel administracyjny
-# def panel_administracyjny():
-#     st.title("Panel administracyjny")
-#     st.write("Witaj Administratorze!")
-#     # Tutaj umieść kod panelu administracyjnego
+# Panel administracyjny
+def panel_administracyjny():
+    st.title("Panel administracyjny")
+    st.write("Witaj Administratorze!")
+    # Tutaj umieść kod panelu administracyjnego
 
-# # Strona startowa
-# def strona_startowa():
-#     st.title("Witaj na stronie startowej")
-#     st.write("Cześć, tutaj możesz zobaczyć przykładową stronę startową.")
+# Strona startowa
+def strona_startowa():
+    st.title("Witaj na stronie startowej")
+    st.write("Cześć, tutaj możesz zobaczyć przykładową stronę startową.")
 
-# # Main
-# def main():
-#     if panel_logowania():
-#         panel_administracyjny()
-#     else:
-#         strona_startowa()
+# Main
+def main():
+    if panel_logowania():
+        panel_administracyjny()
+    else:
+        strona_startowa()
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
 
 # -----------------------------------------------------------------------------------------------
 
