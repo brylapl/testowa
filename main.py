@@ -25,6 +25,8 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
+Dodaj do poniższego kodu, kod, który umożliwia wylogowanie się z panelu administracyjnego i powrócenie na stronę główną.
+
 # Panel logowania dla administratora
 def panel_logowania():
     st.sidebar.header("Panel logowania")
@@ -59,7 +61,6 @@ def main():
 
 if __name__ == "__main__":
     main() 
-
 
 
 
