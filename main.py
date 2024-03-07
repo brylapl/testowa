@@ -24,31 +24,108 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
-# definiowanie danych logowania
-login_credentials = {
-    "admin": "admin123",
-    "user": "user123"
-}
 
-# funkcja do sprawdzania danych logowania
-def authenticate(username, password):
-    if username in login_credentials and login_credentials[username] == password:
-        return True
+import streamlit as st
+
+# Panel logowania dla administratora
+def panel_logowania():
+    st.sidebar.header("Panel logowania")
+    
+    username = st.sidebar.text_input("Username")
+    password = st.sidebar.text_input("Password", type="password")
+    
+    if st.sidebar.button("Login"):
+        if username == "admin" and password == "admin123":
+            st.sidebar.success("Zalogowano pomyślnie!")
+            return True
+        else:
+            st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
+            return False
+
+# Panel administracyjny
+def panel_administracyjny():
+    st.title("Panel administracyjny")
+    st.write("Witaj Administratorze!")
+    # Tutaj umieść kod panelu administracyjnego
+
+# Strona startowa
+def strona_startowa():
+    st.title("Witaj na stronie startowej")
+    st.write("Cześć, tutaj możesz zobaczyć przykładową stronę startową.")
+
+# Main
+def main():
+    if panel_logowania():
+        panel_administracyjny()
     else:
-        return False
+        strona_startowa()
 
-# wyświetlanie panelu logowania
-username = st.text_input("Username")
-password = st.text_input("Password", type="password")
+if __name__ == "__main__":
+    main()
 
-if st.button("Login"):
-    if authenticate(username, password):
-        st.success("Logged in successfully!")
-        st.session_state.logged_in = True
-    else:
-        st.error("Niepoprawny login lub hasło. Spróbuj ponownie.")
 
-# przekierowanie do panelu administracji po zalogowaniu
-if "logged_in" in st.session_state:
-    if st.session_state.logged_in:
-        st.write("Tutaj jest panel administracyjny")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # definiowanie danych logowania
+# login_credentials = {
+#     "admin": "admin123",
+#     "user": "user123"
+# }
+
+# # funkcja do sprawdzania danych logowania
+# def authenticate(username, password):
+#     if username in login_credentials and login_credentials[username] == password:
+#         return True
+#     else:
+#         return False
+
+# # wyświetlanie panelu logowania
+# username = st.text_input("Username")
+# password = st.text_input("Password", type="password")
+
+# if st.button("Login"):
+#     if authenticate(username, password):
+#         st.success("Logged in successfully!")
+#         st.session_state.logged_in = True
+#     else:
+#         st.error("Niepoprawny login lub hasło. Spróbuj ponownie.")
+
+# # przekierowanie do panelu administracji po zalogowaniu
+# if "logged_in" in st.session_state:
+#     if st.session_state.logged_in:
+#         st.write("Tutaj jest panel administracyjny")
