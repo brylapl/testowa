@@ -26,6 +26,8 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('baza danych')
 
 
+Dodaj do poniższego kodu, kod, który umożliwia wylogowanie się z panelu administracyjnego i powrócenie na stronę główną.
+
 # Panel logowania dla administratora
 def panel_logowania():
     st.sidebar.header("Panel logowania")
@@ -41,11 +43,14 @@ def panel_logowania():
             st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
             return False
 
+
 # Panel administracyjny
 def panel_administracyjny():
     st.title("Panel administracyjny")
-    st.write("Witaj Administratorze!")
     # Tutaj umieść kod panelu administracyjnego
+    if st.button("Logout"):
+        st.success("Zostałeś wylogowany!")
+        return False
 
 # Strona startowa
 def strona_startowa():
@@ -55,12 +60,13 @@ def strona_startowa():
 # Main
 def main():
     if panel_logowania():
-        panel_administracyjny()
-    strona_startowa() # umieszczamy stronę startową po zalogowaniu
+        if panel_administracyjny():
+            strona_startowa()
+    else:
+        strona_startowa()
 
 if __name__ == "__main__":
     main() 
-
 
 
 
