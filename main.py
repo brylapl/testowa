@@ -17,8 +17,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 #-------------------------------------------------------------------------------------------
-import smtplib
-import time
+from session_state import get
 
 headers = requests.utils.default_headers()
 headers.update({
