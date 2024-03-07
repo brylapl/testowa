@@ -46,7 +46,7 @@ if st.button("Login"):
         st.success("Logged in successfully!")
         st.session_state.logged_in = True
     else:
-        st.error("Invalid credentials")
+        st.error("Niepoprawny login lub hasło. Spróbuj ponownie.")
 
 # przekierowanie do panelu administracji po zalogowaniu
 if "logged_in" in st.session_state:
