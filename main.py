@@ -28,6 +28,7 @@ st.header('baza danych')
 
 # Panel logowania dla administratora
 login_panel = st.sidebar.empty()
+st.text('wpisz haslo')
 password = login_panel.text_input("Hasło", type="password")
 if password == "admin123":  # Tymczasowe hasło dla przykładu
     is_logged_in = True
