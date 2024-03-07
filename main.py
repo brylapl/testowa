@@ -46,21 +46,22 @@ def panel_logowania():
 def panel_administracyjny():
     st.title("Panel administracyjny")
     st.write("TREŚĆ WIDOCZNA TYLKO DLA MNIE")
-	def create_table():
-        conn = sqlite3.connect('.db')
+    
+    def create_table():
+        conn = sqlite3.connect('mydatabase.db')
         c = conn.cursor()
         c.execute('''CREATE TABLE IF NOT EXISTS users
                  (id INTEGER PRIMARY KEY, name TEXT, email TEXT)''')
         conn.commit()
         conn.close()
-
+    
     def add_user(name, email):
         conn = sqlite3.connect('mydatabase.db')
         c = conn.cursor()
         c.execute('''INSERT INTO users (name, email) VALUES (?, ?)''', (name, email))
         conn.commit()
         conn.close()
-
+    
     def read_users():
         conn = sqlite3.connect('mydatabase.db')
         c = conn.cursor()
@@ -82,46 +83,38 @@ def panel_administracyjny():
         c.execute('''DELETE FROM users WHERE id=?''', (id,))
         conn.commit()
         conn.close()
-    
     # Create table if it doesn't exist
     create_table()
-    
-    # App layout
+
     st.title('CRUD Database Management')
-    
     # Add user form
     st.subheader('Add User')
     name = st.text_input('Name')
     email = st.text_input('Email')
     if st.button('Add User'):
-        add_user(name, email)
+        add_user(name, email)\
         st.success('User added successfully!')
     
-    # Show all users
     st.subheader('All Users')
     users = read_users()
     for user in users:
         st.write(f'ID: {user[0]}, Name: {user[1]}, Email: {user[2]}')
-    
-    # Update user form
-    st.subheader('Update User')
-    update_id = st.number_input('ID to Update')
-    new_name = st.text_input('New Name')
-    new_email = st.text_input('New Email')
-    if st.button('Update User'):
-        update_user(update_id, new_name, new_email)
-        st.success('User updated successfully!')
-    
-    # Delete user form
-    st.subheader('Delete User')
-    delete_id = st.number_input('ID to Delete')
-    if st.button('Delete User'):
-        delete_user(delete_id)
-        st.success('User deleted successfully!')
-    
 
+# # Update user form
+# st.subheader('Update User')
+# update_id = st.number_input('ID to Update')
+# new_name = st.text_input('New Name')
+# new_email = st.text_input('New Email')
+# if st.button('Update User'):
+#     update_user(update_id, new_name, new_email)
+#     st.success('User updated successfully!')
 
-
+# # Delete user form
+# st.subheader('Delete User')
+# delete_id = st.number_input('ID to Delete')
+# if st.button('Delete User'):
+#     delete_user(delete_id)
+#     st.success('User deleted successfully!')
     
     # Tutaj umieść kod panelu administracyjnego
     if st.button("Logout"):
