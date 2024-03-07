@@ -25,7 +25,6 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
-# ----------------------------------------------------------------------------------------------
 # Panel logowania dla administratora
 def panel_logowania():
     st.sidebar.header("Panel logowania")
@@ -56,11 +55,54 @@ def strona_startowa():
 def main():
     if panel_logowania():
         panel_administracyjny()
-    else:
-        strona_startowa()
+    strona_startowa() # umieszczamy stronę startową po zalogowaniu
 
 if __name__ == "__main__":
-    main()
+    main() 
+
+Dokonaliśmy zmiany w funkcji main(), aby strona startowa była dostępna również po zalogowaniu do panelu administratora. Teraz strona startowa będzie wyświetlana po udanym zalogowaniu, obok panelu administracyjnego.
+
+
+
+
+
+
+# ----------------------------------------------------------------------------------------------
+# # Panel logowania dla administratora
+# def panel_logowania():
+#     st.sidebar.header("Panel logowania")
+    
+#     username = st.sidebar.text_input("Username")
+#     password = st.sidebar.text_input("Password", type="password")
+    
+#     if st.sidebar.button("Login"):
+#         if username == "admin" and password == "admin123":
+#             st.sidebar.success("Zalogowano pomyślnie!")
+#             return True
+#         else:
+#             st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
+#             return False
+
+# # Panel administracyjny
+# def panel_administracyjny():
+#     st.title("Panel administracyjny")
+#     st.write("Witaj Administratorze!")
+#     # Tutaj umieść kod panelu administracyjnego
+
+# # Strona startowa
+# def strona_startowa():
+#     st.title("Witaj na stronie startowej")
+#     st.write("Cześć, tutaj możesz zobaczyć przykładową stronę startową.")
+
+# # Main
+# def main():
+#     if panel_logowania():
+#         panel_administracyjny()
+#     else:
+#         strona_startowa()
+
+# if __name__ == "__main__":
+#     main()
 
 # -----------------------------------------------------------------------------------------------
 
