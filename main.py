@@ -26,9 +26,9 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('baza danych')
 
 
+
 # Panel logowania dla administratora
-login_panel = st.sidebar.empty()
-st.text('wpisz haslo')
+login_panel = st.empty()
 password = login_panel.text_input("Hasło", type="password")
 if password == "admin123":  # Tymczasowe hasło dla przykładu
     is_logged_in = True
