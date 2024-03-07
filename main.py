@@ -25,6 +25,7 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
 
+import streamlit as st
 
 # Panel logowania dla administratora
 def panel_logowania():
@@ -41,14 +42,11 @@ def panel_logowania():
             st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
             return False
 
-
 # Panel administracyjny
 def panel_administracyjny():
     st.title("Panel administracyjny")
+    st.write("Witaj Administratorze!")
     # Tutaj umieść kod panelu administracyjnego
-    if st.button("Logout"):
-        st.success("Zostałeś wylogowany!")
-        return False
 
 # Strona startowa
 def strona_startowa():
@@ -58,14 +56,56 @@ def strona_startowa():
 # Main
 def main():
     if panel_logowania():
-        strona_startowa()
-        if panel_administracyjny():
-            strona_startowa()
+        panel_administracyjny()
     else:
         strona_startowa()
 
 if __name__ == "__main__":
-    main() 
+    main()
+
+
+
+
+# # Panel logowania dla administratora
+# def panel_logowania():
+#     st.sidebar.header("Panel logowania")
+    
+#     username = st.sidebar.text_input("Username")
+#     password = st.sidebar.text_input("Password", type="password")
+    
+#     if st.sidebar.button("Login"):
+#         if username == "admin" and password == "admin123":
+#             st.sidebar.success("Zalogowano pomyślnie!")
+#             return True
+#         else:
+#             st.sidebar.error("Błąd logowania. Spróbuj ponownie.")
+#             return False
+
+
+# # Panel administracyjny
+# def panel_administracyjny():
+#     st.title("Panel administracyjny")
+#     # Tutaj umieść kod panelu administracyjnego
+#     if st.button("Logout"):
+#         st.success("Zostałeś wylogowany!")
+#         return False
+
+# # Strona startowa
+# def strona_startowa():
+#     st.title("STRONA STARTOWA")
+#     st.write("ZAWARTOŚĆ WIDOCZNA DLA WSZYTSTKICH")
+
+# # Main
+# def main():
+#     if panel_logowania():
+#         strona_startowa()
+#         if panel_administracyjny():
+#             strona_startowa()
+#     else:
+#         strona_startowa()
+
+# if __name__ == "__main__":
+#     main() 
 
 
 
