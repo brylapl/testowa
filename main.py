@@ -58,6 +58,8 @@ def strona_startowa():
 # Main
 def main():
     if panel_logowania():
+        panel_administracyjny()
+        strona_startowa()
         if panel_administracyjny():
             strona_startowa()
     else:
