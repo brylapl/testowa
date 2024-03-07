@@ -60,7 +60,6 @@ def main():
 if __name__ == "__main__":
     main() 
 
-Dokonaliśmy zmiany w funkcji main(), aby strona startowa była dostępna również po zalogowaniu do panelu administratora. Teraz strona startowa będzie wyświetlana po udanym zalogowaniu, obok panelu administracyjnego.
 
 
 
