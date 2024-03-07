@@ -88,11 +88,12 @@ def panel_administracyjny():
 
     st.title('CRUD Database Management')
     # Add user form
+    
     st.subheader('Add User')
     name = st.text_input('Name')
     email = st.text_input('Email')
     if st.button('Add User'):
-        add_user(name, email)\
+        add_user(name, email)
         st.success('User added successfully!')
     
     st.subheader('All Users')
