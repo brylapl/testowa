@@ -47,6 +47,9 @@ def panel_administracyjny():
     st.title("Panel administracyjny")
     st.write("Witaj Administratorze!")
     # Tutaj umieść kod panelu administracyjnego
+    if st.button("Logout"):
+        st.success("Zostałeś wylogowany!")
+        return False
 
 # Strona startowa
 def strona_startowa():
