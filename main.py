@@ -26,3 +26,26 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
+
+session_state = get(user_id=None)
+
+if session_state.user_id is None:
+    login = st.text_input('Login')
+    password = st.text_input('Password', type='password')
+
+    if st.button('Login'):
+        # Tutaj dodaj kod weryfikujący poprawność loginu i hasła
+        # np. pobranie danych z bazy danych i porównanie z wpisanymi wartościami
+
+        # Imitacja poprawności hasła (dla potrzeb przykładu)
+        if login == 'admin' and password == 'admin':
+            session_state.user_id = 1
+        elif login == 'user' and password == 'user':
+            session_state.user_id = 2
+        else:
+            st.error('Nieprawidłowy login lub hasło!')
+else:
+    if session_state.user_id == 1:
+        st.write('Witaj, administrator!') # Strona administracyjna
+    else:
+        st.write('Witaj, zwykły użytkowniku!') # Strona startowa dla zwykłych użytkowników
