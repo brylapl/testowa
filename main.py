@@ -17,7 +17,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 #-------------------------------------------------------------------------------------------
-from session_state import get
+
 
 headers = requests.utils.default_headers()
 headers.update({
@@ -26,26 +26,31 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('baza danych')
+# definiowanie danych logowania
+login_credentials = {
+    "admin": "admin123",
+    "user": "user123"
+}
 
-session_state = get(user_id=None)
-
-if session_state.user_id is None:
-    login = st.text_input('Login')
-    password = st.text_input('Password', type='password')
-
-    if st.button('Login'):
-        # Tutaj dodaj kod weryfikujący poprawność loginu i hasła
-        # np. pobranie danych z bazy danych i porównanie z wpisanymi wartościami
-
-        # Imitacja poprawności hasła (dla potrzeb przykładu)
-        if login == 'admin' and password == 'admin':
-            session_state.user_id = 1
-        elif login == 'user' and password == 'user':
-            session_state.user_id = 2
-        else:
-            st.error('Nieprawidłowy login lub hasło!')
-else:
-    if session_state.user_id == 1:
-        st.write('Witaj, administrator!') # Strona administracyjna
+# funkcja do sprawdzania danych logowania
+def authenticate(username, password):
+    if username in login_credentials and login_credentials[username] == password:
+        return True
     else:
-        st.write('Witaj, zwykły użytkowniku!') # Strona startowa dla zwykłych użytkowników
+        return False
+
+# wyświetlanie panelu logowania
+username = st.text_input("Username")
+password = st.text_input("Password", type="password")
+
+if st.button("Login"):
+    if authenticate(username, password):
+        st.success("Logged in successfully!")
+        st.session_state.logged_in = True
+    else:
+        st.error("Invalid credentials")
+
+# przekierowanie do panelu administracji po zalogowaniu
+if "logged_in" in st.session_state:
+    if st.session_state.logged_in:
+        st.write("Tutaj jest panel administracyjny")
