@@ -26,8 +26,6 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('baza danych')
 
 
-Dodaj do poniższego kodu, kod, który umożliwia wylogowanie się z panelu administracyjnego i powrócenie na stronę główną.
-
 # Panel logowania dla administratora
 def panel_logowania():
     st.sidebar.header("Panel logowania")
