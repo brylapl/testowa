@@ -7,4 +7,4 @@ selenium
 seleniumbase
 webdriver-manager
 streamlit-authenticator
-session-state-py
+Flask
