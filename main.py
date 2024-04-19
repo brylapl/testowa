@@ -36,8 +36,8 @@ with open('style.css') as f:
 def on_change(key):
     selection = st.session_state[key]
     
-selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'Settings'],
-                        icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "list-task", 'gear'],
+selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
+                        icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
                         on_change=on_change, key='menu_5', orientation="horizontal")
 
 if selected5 == "Home":
