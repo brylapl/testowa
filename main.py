@@ -31,7 +31,6 @@ st.header('BAZA DANYCH')
 # 5. Add on_change callback
 def on_change(key):
     selection = st.session_state[key]
-    st.write(f"Selection changed to {selection}")
     
 selected5 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
                         icons=['house', 'cloud-upload', "list-task", 'gear'],
