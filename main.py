@@ -35,5 +35,5 @@ except:
 
 start = st.checkbox('Uruchom')
 if start:
-    for row in c.execute('SELECT ID FROM list_teams'):
+    for row in c.execute("SELECT ID FROM list_teams"):
         st.write(row)
