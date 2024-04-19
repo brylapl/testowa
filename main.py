@@ -32,6 +32,7 @@ try:
     st.write("Połączenie z bazą danych zostało nawiązane")
 except:
     st.write(f"Błąd połączenia z bazą danych")
+    conn.close()
 
 start = st.checkbox('Uruchom')
 if start:
