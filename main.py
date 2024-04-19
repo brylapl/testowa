@@ -33,4 +33,12 @@ def on_change(key):
 selected5 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
                         icons=['house', 'cloud-upload', "list-task", 'gear'],
                         on_change=on_change, key='menu_5', orientation="horizontal")
-selected5
+
+if selected5 == "Home":
+    st.write("You selected the Home page")
+elif selected5 == "Upload":
+    st.write("You selected the Upload page")
+elif selected5 == "Tasks":
+    st.write("You selected the Tasks page")
+elif selected5 == "Settings":
+    st.write("You selected the Settings page")
