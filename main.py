@@ -30,7 +30,7 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 def on_change(key):
     selection = st.session_state[key]
     
-selected5 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
+selected5 = option_menu(None, ["Home", "Upload", "Contact", 'Settings'],
                         icons=['house', 'cloud-upload', "list-task", 'gear'],
                         on_change=on_change, key='menu_5', orientation="horizontal")
 
