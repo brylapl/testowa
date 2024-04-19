@@ -36,6 +36,12 @@ selected5 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
 
 if selected5 == "Home":
     st.write("You selected the Home page")
+    # Wczytanie zawartości pliku .html
+    with open("contact.html", "r") as file:
+        html_content = file.read()
+
+# Wyświetlenie zawartości pliku .html w aplikacji streamlit
+st.markdown(html_content, unsafe_allow_html=True)
 elif selected5 == "Upload":
     st.write("You selected the Upload page")
 elif selected5 == "Tasks":
