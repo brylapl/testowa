@@ -36,7 +36,7 @@ selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
 selected2
 
 # 3. CSS style definitions
-selected3 = option_menu(None, ["Home", "Calculator",  "Contact", 'About'], 
+selected3 = option_menu(None, ["Home", "Calc",  "Contact", 'About'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal",
     styles={
