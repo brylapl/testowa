@@ -18,7 +18,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import mysql.connector
 #-------------------------------------------------------------------------------------------
-start_button = st.button("Uruchom", type="secondary")
 headers = requests.utils.default_headers()
 headers.update({
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0',
@@ -26,7 +25,7 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('BAZA DANYCH')
-
+st.write(st.__version__)
 try:
     conn = mysql.connector.connect( host=st.secrets["host"], user=st.secrets["user"], password=st.secrets["password"], database=st.secrets["database"] )
     c = conn.cursor()
