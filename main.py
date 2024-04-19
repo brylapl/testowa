@@ -28,27 +28,6 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('BAZA DANYCH')
 
 
-
-# 2. horizontal menu
-selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-selected2
-
-# 3. CSS style definitions
-selected3 = option_menu(None, ["Home", "Calc",  "Contact", 'About'], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal",
-    styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "25px"}, 
-        "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "green"},
-    }
-)
-
-
-
 # 5. Add on_change callback
 def on_change(key):
     selection = st.session_state[key]
