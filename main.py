@@ -33,5 +33,5 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
-st.write('TEKST')
+st.button('TEST')
 
