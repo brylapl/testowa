@@ -44,7 +44,7 @@ now = datetime.now()
 date_time = now.strftime("%Y-%m-%d")
 time = now.strftime("%H:%M:%S")
 
-if st.form_submit_button(label="Submit"):
+if st.checkbox("Submit"):
     # Wstawienie danych do bazy danych
     sql = "INSERT INTO feedback (category, message, email, date_time, time) VALUES (%s, %s, %s, %s, %s)"
     val = (category, message, email, date_time, time)
