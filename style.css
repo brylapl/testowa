@@ -2,3 +2,10 @@
     background-color: yellow;
     border-radius: 16.5rem;
 }
+
+@media only screen and (max-width: 480px){
+    
+.menu .container-xxl[data-v-5af006b8] {
+    background-color: yellow;
+    border-radius: 0.5rem;
+}
