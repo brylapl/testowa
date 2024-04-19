@@ -28,11 +28,12 @@ st.header('BAZA DANYCH')
 
 try:
     conn = mysql.connector.connect( host=st.secrets["host"], user=st.secrets["user"], password=st.secrets["password"], database=st.secrets["database"] )
+    c = conn.cursor()
     st.write("Połączenie z bazą danych zostało nawiązane")
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
-c = conn.cursor()
+
 
 st.button("Start")
 
