@@ -35,7 +35,9 @@ except:
 
 start = st.checkbox('Uruchom')
 if start:
-    for row in c.execute("SELECT ID FROM list_teams").fetchall():
+    c.execute('SELECT ID FROM list_teams')
+    lista = c.fetchall()
+    for row in lista:
         st.write(row)
 try:
     conn.close()
