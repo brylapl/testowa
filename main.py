@@ -33,13 +33,23 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
-start = st.checkbox('Uruchom')
-if start:
-    c.execute('SELECT ID FROM list_teams')
-    lista = c.fetchall()
-    for row in lista:
-        st.write(row)
-try:
-    conn.close()
-except:
-    pass
+# Formularz zgłaszania błędów i propozycji zmian
+st.title("Formularz zgłaszania błędów i propozycji zmian")
+
+category = st.selectbox("Wybierz kategorię zgłoszenia:", ["Error", "Inne"])
+message = st.text_area("Wiadomość")
+email = st.text_input("Email kontaktowy")
+
+now = datetime.now()
+date_time = now.strftime("%Y-%m-%d")
+time = now.strftime("%H:%M:%S")
+
+if st.button("Wyślij"):
+    # Wstawienie danych do bazy danych
+    sql = "INSERT INTO feedback (category, message, email, date_time, time) VALUES (%s, %s, %s, %s, %s)"
+    val = (category, message, email, date_time, time)
+    c.execute(sql, val)
+    conn.commit()
+    st.success("Zgłoszenie zostało wysłane pomyślnie!")
+
+conn.close()
