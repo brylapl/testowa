@@ -25,7 +25,6 @@ headers.update({
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 st.header('BAZA DANYCH')
-st.write(st.__version__)
 try:
     conn = mysql.connector.connect( host=st.secrets["host"], user=st.secrets["user"], password=st.secrets["password"], database=st.secrets["database"] )
     c = conn.cursor()
