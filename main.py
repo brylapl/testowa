@@ -34,5 +34,5 @@ except:
 
 c = conn.cursor()
 
-st.button("Start", type="primary")
+st.button("Start")
 
