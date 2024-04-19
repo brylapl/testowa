@@ -8,3 +8,4 @@ seleniumbase
 webdriver-manager
 streamlit-authenticator
 Flask
+mysql-connector-python
