@@ -34,6 +34,5 @@ except:
 
 c = conn.cursor()
 
-if st.button("Start", type="primary"):
-    st.write('row')
+st.button("Start", type="primary")
 
