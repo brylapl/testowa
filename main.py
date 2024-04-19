@@ -33,6 +33,10 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
+try:
+    conn.close()
+except:
+    pass
 # start = st.checkbox('Uruchom')
 # if start:
 #     for row in c.execute("SELECT ID FROM list_teams"):
