@@ -34,8 +34,7 @@ except:
 
 c = conn.cursor()
 
-btn = st.button = ('Uruchom')
-if btn:
+if st.button("Start", type="primary"):
     for row in c.execute('SELECT ID FROM list_teams'):
         st.write(row)
 
