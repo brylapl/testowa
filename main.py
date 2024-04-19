@@ -28,11 +28,6 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered"
 st.header('BAZA DANYCH')
 
 
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
 
 # 2. horizontal menu
 selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
