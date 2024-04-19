@@ -29,8 +29,8 @@ try:
     conn = mysql.connector.connect( host=st.secrets["host"], user=st.secrets["user"], password=st.secrets["password"], database=st.secrets["database"] )
     c = conn.cursor()
     st.write("Połączenie z bazą danych zostało nawiązane")
-except:
-    st.write(f"Błąd połączenia z bazą danych")
+except mysql.connector.Error as e:
+    st.write(f"Błąd połączenia z bazą danych {e}")
 
 # Formularz zgłaszania błędów i propozycji zmian
 st.title("Formularz zgłaszania błędów i propozycji zmian")
