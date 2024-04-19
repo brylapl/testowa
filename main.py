@@ -28,7 +28,7 @@ st.header('BAZA DANYCH')
 try:
     conn = mysql.connector.connect( host=st.secrets["host"], user=st.secrets["user"], password=st.secrets["password"], database=st.secrets["database"] )
     st.write("Połączenie z bazą danych zostało nawiązane")
-except mysql.connector.Error as e:
-    st.write(f"Błąd połączenia z bazą danych: {e}")
+except:
+    st.write(f"Błąd połączenia z bazą danych")
 
 
