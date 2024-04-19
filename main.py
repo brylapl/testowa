@@ -32,9 +32,8 @@ try:
     st.write("Połączenie z bazą danych zostało nawiązane")
 except:
     st.write(f"Błąd połączenia z bazą danych")
-    conn.close()
 
-start = st.checkbox('Uruchom')
-if start:
-    for row in c.execute("SELECT ID FROM list_teams"):
-        st.write(row)
+# start = st.checkbox('Uruchom')
+# if start:
+#     for row in c.execute("SELECT ID FROM list_teams"):
+#         st.write(row)
