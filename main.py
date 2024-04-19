@@ -35,6 +35,5 @@ except:
 c = conn.cursor()
 
 if st.button("Start", type="primary"):
-    for row in c.execute('SELECT ID FROM list_teams'):
-        st.write(row)
+    st.write('row')
 
