@@ -32,4 +32,10 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
+c = conn.cursor()
+
+btn = st.button = 'Uruchom'
+if btn:
+    for row in c.execute('SELECT ID FROM list_teams'):
+        st.write(row)
 
