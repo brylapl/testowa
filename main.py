@@ -33,7 +33,5 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
-
-
-st.button("Start")
+st.write('TEKST')
 
