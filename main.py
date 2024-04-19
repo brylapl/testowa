@@ -25,7 +25,7 @@ headers.update({
 })
 
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
-st.button("TESTOWE")
+
 # 5. Add on_change callback
 def on_change(key):
     selection = st.session_state[key]
