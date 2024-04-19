@@ -17,6 +17,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import mysql.connector
+from contact import contact
 #-------------------------------------------------------------------------------------------
 from streamlit_option_menu import option_menu
 headers = requests.utils.default_headers()
@@ -43,5 +44,6 @@ elif selected5 == "Contact":
     with open("contact.html", "r") as file:
         html_content = file.read()
         st.markdown(html_content, unsafe_allow_html=True)
+    contact()
 elif selected5 == "Settings":
     st.write("You selected the Settings page")
