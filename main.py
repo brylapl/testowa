@@ -33,8 +33,6 @@ try:
 except:
     st.write(f"Błąd połączenia z bazą danych")
 
-agree = st.checkbox('I agree')
-
-if agree:
-    st.write('Great!')
-
+btn = st.button("Test")
+if btn:
+    st.write('test')
