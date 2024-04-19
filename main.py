@@ -50,5 +50,7 @@ elif selected5 == "Contact":
         html_content = file.read()
         st.markdown(html_content, unsafe_allow_html=True)
     contact()
-elif selected5 == "Settings":
-    st.write("You selected the Settings page")
+elif selected5 == "About":
+    with open("about.html", "r") as file:
+        about_content = file.read()
+        st.markdown(about_content, unsafe_allow_html=True)
