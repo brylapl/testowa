@@ -32,5 +32,5 @@ def on_change(key):
     
 selected5 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
                         icons=['house', 'cloud-upload', "list-task", 'gear'],
-                        on_change=on_change, key='menu_5', orientation="horizontal")
+                        on_change=on_change, key='menu_5', orientation="vertical")
 selected5
