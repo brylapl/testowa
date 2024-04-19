@@ -32,7 +32,3 @@ try:
     st.write("Połączenie z bazą danych zostało nawiązane")
 except:
     st.write(f"Błąd połączenia z bazą danych")
-
-btn = st.button("Test")
-if btn:
-    st.write('test')
