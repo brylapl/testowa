@@ -162,6 +162,18 @@ padding: 0 0 0 26px;
 margin: 0 0 14px;
 }
 
+ul.bull li:before {
+content: "\f105";
+font: normal normal normal 14px / 1 FontAwesome;
+position: absolute;
+left: 0;
+top: 2px;
+display: inline-block;
+vertical-align: top;
+font-size: 16px;
+color: #29ABE2;
+}
+
 @media (min-width: 992px)
 .col-lg-6 {
 -ms-flex: 0 0 50%;
