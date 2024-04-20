@@ -52,7 +52,7 @@ with open('style.css') as f:
 #         st.markdown(about_content, unsafe_allow_html=True)
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
-EXAMPLE_NO = 1
+EXAMPLE_NO = 2
 
 
 def streamlit_menu(example=1):
