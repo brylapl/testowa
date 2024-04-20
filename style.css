@@ -1,6 +1,6 @@
 .row-widget {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 @media only screen and (max-width: 480px){
