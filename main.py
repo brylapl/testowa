@@ -28,8 +28,13 @@ headers.update({
 st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 #------------------------------------------------------------------------------------------------
 #STYLE CSS
-with open('style.css') as f:
+with open('/html/style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+#------------------------------------------------------------------------------------------------
+#HTML
+ with open("/html/index.html", "r") as file:
+        index = file.read()
+        st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
 # # 5. Add on_change callback
