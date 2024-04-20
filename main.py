@@ -32,26 +32,64 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-# 5. Add on_change callback
-def on_change(key):
-    selection = st.session_state[key]
+# # 5. Add on_change callback
+# def on_change(key):
+#     selection = st.session_state[key]
     
-selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
-                        icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
-                        on_change=on_change, key='menu_5', orientation="horizontal")
+# selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
+#                         icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
+#                         on_change=on_change, key='menu_5', orientation="horizontal")
 
-if selected5 == "Home":
-    st.write("You selected the Home page")    
-elif selected5 == "Upload":
-    st.write("You selected the Upload page")
-elif selected5 == "Contact":
-    with open("contact.html", "r") as file:
-        con = file.read()
-        st.markdown(con, unsafe_allow_html=True)
-    contact()
-elif selected5 == "About":
-    with open("about.html", "r") as file:
-        about_content = file.read()
-        st.markdown(about_content, unsafe_allow_html=True)
+# if selected5 == "Home":
+#     st.write("You selected the Home page")    
+# elif selected5 == "Upload":
+#     st.write("You selected the Upload page")
+# elif selected5 == "Contact":
+#     with open("contact.html", "r") as file:
+#         con = file.read()
+#         st.markdown(con, unsafe_allow_html=True)
+#     contact()
+# elif selected5 == "About":
+#     with open("about.html", "r") as file:
+#         about_content = file.read()
+#         st.markdown(about_content, unsafe_allow_html=True)
 
+html_code = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .container {
+        max-width: 800px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Our Landing Page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus libero.
+        In porttitor interdum sapien nec viverra. Nullam pharetra nisi sit amet pulvinar iaculis.
+    </p>
+    <a href="#" class="btn btn-primary">Learn More</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+"""
+
+st.components.v1.html(html_code)
 
