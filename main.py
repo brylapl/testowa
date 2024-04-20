@@ -176,6 +176,25 @@ max-width: 50%; }
 .container { 
 max-width: 960px; 
 } 
+@media only screen and (max-width: 600px) { 
+.container { 
+padding-right: 10px;
+padding-left: 10px; 
+}
+
+.section-heading, .rs-feature-box-1 .title {
+font-size: 40px;
+}
+
+.supheading {
+font-size: 16px;
+}
+
+ul.bull li {
+padding: 0;
+margin-left: 10px;
+}
+}
 }
 
 </style>""",unsafe_allow_html=True)
