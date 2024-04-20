@@ -55,12 +55,20 @@ with open('style.css') as f:
 #         st.markdown(about_content, unsafe_allow_html=True)
 
 st.markdown('''
-
 <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Landing Page</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"> 
 <style> 
-body { font-family: Arial, sans-serif; background-color: #f8f9fa; } 
-.container { margin: 100px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); } 
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f8f9fa; 
+} 
+.container { 
+    margin: 100px auto; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+} 
 </style> 
 </head> 
 <body> 
