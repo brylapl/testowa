@@ -195,7 +195,7 @@ padding: 0;
 margin-left: 10px;
 }
 @media screen and (max-width: 767px) {
-  img {
+  .obraz {
     display: none;
   }
 }
