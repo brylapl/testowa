@@ -65,7 +65,7 @@ body {
     background-color: #f8f9fa; 
 } 
 .container { 
-    margin: 100px auto; 
+    margin: 10px auto; 
     padding: 20px; 
     background-color: #fff; 
     border-radius: 5px; 
