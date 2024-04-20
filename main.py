@@ -56,6 +56,126 @@ with open('style.css') as f:
 
 def btn():
     btn = st.button('Uruchom')
+
+st.markdown('''<style>
+.section-border {
+border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.section {
+position: relative;
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+div {
+display: block;
+}
+
+.content-wrap {
+padding: 100px 0;
+}
+
+@media (min-width: 992px)
+.container {
+max-width: 960px;
+}
+
+.container {
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.align-items-center {
+-ms-flex-align: center !important;
+align-items: center !important;
+}
+
+.row {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: -15px;
+}
+
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.mb-3, .my-3 {
+margin-bottom: 1rem !important;
+}
+
+.img-fluid {
+max-width: 100%;
+height: auto;
+}
+
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.supheading {
+font-size: 18px;
+letter-spacing: 1px;
+margin-bottom: 10px;
+color: #999999;
+}
+
+p {
+margin: 0 0 20px 0;
+color: #999999;
+}
+
+.section-heading, .rs-feature-box-1 .title {
+font-size: 60px;
+line-height: 1.2em;
+margin-bottom: 20px;
+margin-top: 0;
+padding-bottom: 5px;
+position: relative;
+color: #222;
+font-weight: 400;
+}
+
+p {
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+}
+
+.spacer-10 {
+height: 10px;
+}
+
+ul.bull {
+margin: 0 0 20px;
+list-style: none;
+padding: 0;
+color: #999999;
+}
+
+ul.bull li {
+position: relative;
+padding: 0 0 0 26px;
+margin: 0 0 14px;
+}
+</style>''',unsafe_allw_html=True)
 st.markdown('''
 <!DOCTYPE html>
 <html lang="pl">
