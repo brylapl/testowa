@@ -1,6 +1,7 @@
 .row-widget {
-    align-items:right,
-    justify-content: right;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; 
 }
 
 @media only screen and (max-width: 480px){
