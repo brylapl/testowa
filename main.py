@@ -69,7 +69,6 @@ html_code = """
         background-color: #f8f9fa;
     }
     .container {
-        max-width: 800px;
         margin: 100px auto;
         padding: 20px;
         background-color: #fff;
