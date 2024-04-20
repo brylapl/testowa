@@ -46,9 +46,9 @@ elif selected5 == "Upload":
     st.write("You selected the Upload page")
 elif selected5 == "Contact":
     with open("contact.html", "r") as file:
-        contact = file.read()
-        st.markdown(contact, unsafe_allow_html=True)
-    contact()
+        con = file.read()
+        st.markdown(con, unsafe_allow_html=True)
+        contact()
 elif selected5 == "About":
     with open("about.html", "r") as file:
         about_content = file.read()
