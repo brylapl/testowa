@@ -58,6 +58,11 @@ def btn():
     btn = st.button('Uruchom')
 
 st.markdown("""<style>
+
+div[data-stale="false"] {
+  display:none;
+}
+
 .section-border {
 border-bottom: 1px solid rgba(153, 153, 153, 0.2);
 }
