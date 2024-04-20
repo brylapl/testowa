@@ -1,6 +1,5 @@
-li.nav-item * {
-    background-color: yellow !important;;
-    border-radius: 16.5rem;
+.row-widget {
+    align-items:right,
 }
 
 @media only screen and (max-width: 480px){
