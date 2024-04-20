@@ -52,7 +52,7 @@ with open('style.css') as f:
 #         st.markdown(about_content, unsafe_allow_html=True)
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
-EXAMPLE_NO = 3
+EXAMPLE_NO = 1
 
 
 def streamlit_menu(example=1):
@@ -68,41 +68,7 @@ def streamlit_menu(example=1):
             )
         return selected
 
-    if example == 2:
-        # 2. horizontal menu w/o custom style
-        selected = option_menu(
-            menu_title=None,  # required
-            options=["Home", "Projects", "Contact"],  # required
-            icons=["house", "book", "envelope"],  # optional
-            menu_icon="cast",  # optional
-            default_index=0,  # optional
-            orientation="horizontal",
-        )
-        return selected
-
-    if example == 3:
-        # 2. horizontal menu with custom style
-        selected = option_menu(
-            menu_title=None,  # required
-            options=["Home", "Projects", "Contact"],  # required
-            icons=["house", "book", "envelope"],  # optional
-            menu_icon="cast",  # optional
-            default_index=0,  # optional
-            orientation="horizontal",
-            styles={
-                "container": {"padding": "0!important", "background-color": "#fafafa"},
-                "icon": {"color": "orange", "font-size": "25px"},
-                "nav-link": {
-                    "font-size": "25px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "--hover-color": "red",
-                },
-                "nav-link-selected": {"background-color": "green"},
-            },
-        )
-        return selected
-
+    
 
 selected = streamlit_menu(example=EXAMPLE_NO)
 
@@ -111,4 +77,6 @@ if selected == "Home":
 if selected == "Projects":
     st.title(f"You have selected {selected}")
 if selected == "Contact":
-    st.title(f"You have selected {selected}")
+    with open("about.html", "r") as file:
+        about_content = file.read()
+        st.markdown(about_content, unsafe_allow_html=True)
