@@ -194,10 +194,11 @@ ul.bull li {
 padding: 0;
 margin-left: 10px;
 }
-@media screen and (max-width: 480px) {
-  .obraz {
+@media screen and (max-width: 767px) {
+  img {
     display: none;
   }
+}
 }
 }
 }
