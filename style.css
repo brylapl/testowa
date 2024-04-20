@@ -2,6 +2,7 @@
   justify-content: center;
   background-color: #0d6efd;
   color: white;
+    border: none;
 }
 
 .row-widget button:hover{
