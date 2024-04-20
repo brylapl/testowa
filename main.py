@@ -57,27 +57,29 @@ with open('style.css') as f:
 def btn():
     btn = st.button('Uruchom')
 st.markdown('''
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Landing Page</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"> 
-<style> 
-body { 
-    font-family: Arial, sans-serif; 
-    background-color: #f8f9fa; 
-} 
-.container { 
-    margin: 10px auto; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 5px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-} 
-</style> 
-</head> 
-<body> 
-<div class="container"> 
-<h1>Welcome to Our Landing Page</h1> 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus libero. In porttitor interdum sapien nec viverra. Nullam pharetra nisi sit amet pulvinar iaculis. </p> 
-</div> 
-</body> 
-</html> ''', unsafe_allow_html=True)
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strona główna</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid vh-100" style="background-image: url('https://www.cio.com/wp-content/uploads/2023/05/statistics-stats-big-data-analytics-100613892-orig-4.jpg'); background-size: cover; background-position: center;">
+<h1>Element zajmujący 100% wysokości ekranu</h1>
+<p>Tu znajduje się treść pierwszego elementu strony</p>
+</div>
+
+<div class="container">
+<h2>Treść dopiero po przewinięciu w dół</h2>
+<p>Tu znajduje się kolejna treść strony po przewinięciu</p>
+</div>
+
+<!-- Skrypty Bootstrap 5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+''', unsafe_allow_html=True)
 btn()
