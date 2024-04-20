@@ -59,9 +59,7 @@ def btn():
 
 st.markdown("""<style>
 
-div.block-container.st-emotion-cache-gh2jqd.ea3mdgi5[data-testid="stAppViewBlockContainer"] {
-padding:0px;
-}
+
 
 .section-border {
 border-bottom: 1px solid rgba(153, 153, 153, 0.2);
@@ -200,9 +198,9 @@ padding: 0;
 margin-left: 10px;
 }
 @media screen and (max-width: 767px) {
-  .obraz {
-    display: none;
-  }
+div.block-container.st-emotion-cache-gh2jqd.ea3mdgi5[data-testid="stAppViewBlockContainer"] {
+padding:0px;
+}
 }
 }
 }
