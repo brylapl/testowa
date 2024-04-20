@@ -78,10 +78,7 @@ display: block;
 padding: 100px 0;
 }
 
-@media (min-width: 992px)
-.container {
-max-width: 960px;
-}
+
 
 .container {
 width: 100%;
@@ -105,12 +102,7 @@ margin-right: -15px;
 margin-left: -15px;
 }
 
-@media (min-width: 992px)
-.col-lg-6 {
--ms-flex: 0 0 50%;
-flex: 0 0 50%;
-max-width: 50%;
-}
+
 
 .mb-3, .my-3 {
 margin-bottom: 1rem !important;
@@ -121,12 +113,6 @@ max-width: 100%;
 height: auto;
 }
 
-@media (min-width: 992px)
-.col-lg-6 {
--ms-flex: 0 0 50%;
-flex: 0 0 50%;
-max-width: 50%;
-}
 
 .supheading {
 font-size: 18px;
@@ -175,6 +161,24 @@ position: relative;
 padding: 0 0 0 26px;
 margin: 0 0 14px;
 }
+
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+@media (min-width: 992px)
+.container {
+max-width: 960px;
+}
+
 </style>""",unsafe_allow_html=True)
 
 st.markdown('''
@@ -214,7 +218,7 @@ st.markdown('''
     <li>Remain responsive to our customers’ needs</li>
 </ul>
 <div class="spacer-10"></div>
-<a href="#" class="btn btn-primary">View Works</a>
+<a href="#" class="btn btn-primary text-white">View Works</a>
 
 </div>									
 
