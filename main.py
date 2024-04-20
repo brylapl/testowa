@@ -59,7 +59,7 @@ def btn():
 
 st.markdown("""<style>
 
-div[data-stale="false"] {
+div.block-container.st-emotion-cache-gh2jqd.ea3mdgi5[data-testid="stAppViewBlockContainer"] {
 padding:0px;
 }
 
