@@ -66,16 +66,9 @@ border-bottom: 1px solid rgba(153, 153, 153, 0.2);
 position: relative;
 }
 
-*, *::before, *::after {
-box-sizing: border-box;
-}
-
-div {
-display: block;
-}
 
 .content-wrap {
-padding: 100px 0;
+padding: 50px 0;
 }
 
 
