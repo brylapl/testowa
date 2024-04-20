@@ -60,7 +60,7 @@ def btn():
 st.markdown("""<style>
 
 div[data-stale="false"] {
-  display:none;
+padding:0px;
 }
 
 .section-border {
