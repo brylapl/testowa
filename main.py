@@ -99,7 +99,6 @@ texts = ["Home", "Search", "Profile"]
 # Menu bar
 st.markdown('<div class="menu-bar">', unsafe_allow_html=True)
 for i in range(len(icons)):
-    if st.button(icon_text(icons[i], texts[i]), key=str(i), class_="menu-item"):
+    if st.button(icon_text(icons[i], texts[i]), key=str(i), style={"background-color": "#1E88E5", "color": "white", "padding": "10px", "border-radius": "5px"}):
         st.write(f"You clicked {texts[i]}!")
 st.markdown('</div>', unsafe_allow_html=True)
-
