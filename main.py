@@ -163,8 +163,8 @@ margin: 0 0 14px;
 }
 
 ul.bull li:before {
-content: "\f105";
-font: normal normal normal 14px / 1 FontAwesome;
+content: ">";
+font: normal normal normal 14px ;
 position: absolute;
 left: 0;
 top: 2px;
