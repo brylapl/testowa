@@ -194,7 +194,7 @@ ul.bull li {
 padding: 0;
 margin-left: 10px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .obraz {
     display: none;
   }
