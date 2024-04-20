@@ -48,7 +48,6 @@ elif selected5 == "Contact":
     with open("contact.html", "r") as file:
         con = file.read()
         st.markdown(con, unsafe_allow_html=True)
-        contact()
 elif selected5 == "About":
     with open("about.html", "r") as file:
         about_content = file.read()
