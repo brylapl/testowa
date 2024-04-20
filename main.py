@@ -99,5 +99,5 @@ texts = ["Home", "Search", "Profile"]
 # Menu bar
 st.markdown('<div class="menu-bar">', unsafe_allow_html=True)
 for i in range(len(icons)):
-    st.markdown('<div class="menu-bar"> <button class="menu-btn">Icon 1 - Text 1</button> <button class="menu-btn">Icon 2 - Text 2</button> <button class="menu-btn">Icon 3 - Text 3</button> </div>', unsafe_allow_html=True)
+    st.button(f'Tekst {i}')
 st.markdown('</div>', unsafe_allow_html=True)
