@@ -64,22 +64,165 @@ st.markdown('''
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Strona główna</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.section-border {
+border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.section {
+position: relative;
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+div {
+display: block;
+}
+
+.content-wrap {
+padding: 100px 0;
+}
+
+@media (min-width: 992px)
+.container {
+max-width: 960px;
+}
+
+.container {
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.align-items-center {
+-ms-flex-align: center !important;
+align-items: center !important;
+}
+
+.row {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: -15px;
+}
+
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.mb-3, .my-3 {
+margin-bottom: 1rem !important;
+}
+
+.img-fluid {
+max-width: 100%;
+height: auto;
+}
+
+@media (min-width: 992px)
+.col-lg-6 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.supheading {
+font-size: 18px;
+letter-spacing: 1px;
+margin-bottom: 10px;
+color: #999999;
+}
+
+p {
+margin: 0 0 20px 0;
+color: #999999;
+}
+
+.section-heading, .rs-feature-box-1 .title {
+font-size: 60px;
+line-height: 1.2em;
+margin-bottom: 20px;
+margin-top: 0;
+padding-bottom: 5px;
+position: relative;
+color: #222;
+font-weight: 400;
+}
+
+p {
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+}
+
+.spacer-10 {
+height: 10px;
+}
+
+ul.bull {
+margin: 0 0 20px;
+list-style: none;
+padding: 0;
+color: #999999;
+}
+
+ul.bull li {
+position: relative;
+padding: 0 0 0 26px;
+margin: 0 0 14px;
+}
+</style>
 </head>
 <body>
-
-<div class="container-fluid vh-100" style="background-image: url('https://www.cio.com/wp-content/uploads/2023/05/statistics-stats-big-data-analytics-100613892-orig-4.jpg'); background-size: cover; background-position: center;">
-<h1>Element zajmujący 100% wysokości ekranu</h1>
-<p>Tu znajduje się treść pierwszego elementu strony</p>
-</div>
-
+<div class="section section-border">
+<div class="content-wrap">
 <div class="container">
-<h2>Treść dopiero po przewinięciu w dół</h2>
-<p>Tu znajduje się kolejna treść strony po przewinięciu</p>
+
+<div class="row align-items-center">	
+
+<div class="col-sm-12 col-md-12 col-lg-6">
+
+<img src="https://html.rometheme.pro/knox/01/images/app-img-1.png" alt="" class="img-fluid mb-3">
+
+</div>					
+
+<div class="col-sm-12 col-md-12 col-lg-6">
+<p class="supheading text-cente">No Coding Required</p>
+<h2 class="section-heading">
+    Develop with KNOX HTML Template
+</h2>
+
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</p>
+<div class="spacer-10"></div>
+<ul class="bull">
+    <li>Offer a broad range of cost-effective industrial solutions</li>
+    <li>Maintain a robust inventory of parts and products</li>
+    <li>Remain responsive to our customers’ needs</li>
+</ul>
+<div class="spacer-10"></div>
+<a href="#" class="btn btn-primary">View Works</a>
+
+</div>									
+
 </div>
 
-<!-- Skrypty Bootstrap 5 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</div>
+</div>
+
 </body>
 </html>
+
 ''', unsafe_allow_html=True)
 btn()
