@@ -194,6 +194,11 @@ ul.bull li {
 padding: 0;
 margin-left: 10px;
 }
+@media screen and (max-width: 767px) {
+  .obraz {
+    display: none;
+  }
+}
 }
 }
 
@@ -216,7 +221,7 @@ st.markdown('''
 
 <div class="row align-items-center">	
 
-<div class="col-sm-12 col-md-12 col-lg-6">
+<div class="col-sm-12 col-md-12 col-lg-6 obraz">
 
 <img src="https://html.rometheme.pro/knox/01/images/app-img-1.png" alt="" class="img-fluid mb-3">
 
