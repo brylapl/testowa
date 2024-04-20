@@ -77,6 +77,6 @@ body {
 <div class="container"> 
 <h1>Welcome to Our Landing Page</h1> 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus libero. In porttitor interdum sapien nec viverra. Nullam pharetra nisi sit amet pulvinar iaculis. </p> 
-{btn()} </div> 
+</div> 
 </body> 
 </html> ''', unsafe_allow_html=True)
