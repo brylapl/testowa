@@ -54,8 +54,7 @@ with open('style.css') as f:
 #         about_content = file.read()
 #         st.markdown(about_content, unsafe_allow_html=True)
 
-st.markdown = """
-<!DOCTYPE html>
+st.markdown = ('''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -87,7 +86,7 @@ st.markdown = """
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>""", unsafe_allow_html=True
+</html>''', unsafe_allow_html=True)
 
 
 
