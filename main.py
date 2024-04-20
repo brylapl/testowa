@@ -57,7 +57,7 @@ with open('style.css') as f:
 def btn():
     btn = st.button('Uruchom')
 
-st.markdown('''<style>
+st.markdown("""
 .section-border {
 border-bottom: 1px solid rgba(153, 153, 153, 0.2);
 }
@@ -174,8 +174,8 @@ ul.bull li {
 position: relative;
 padding: 0 0 0 26px;
 margin: 0 0 14px;
-}
-</style>''',unsafe_allw_html=True)
+}""",unsafe_allow_html=True)
+
 st.markdown('''
 <!DOCTYPE html>
 <html lang="pl">
