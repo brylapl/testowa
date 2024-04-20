@@ -8,4 +8,4 @@ def contact():
         st.text_input('Imię', key='name')
         st.text_input('Email', key='email')
         st.text_area('Wiadomość', key='message', height=200)
-        st.button('Wyślij', class_='btn btn-primary')
+        st.form_submit_button('Wyślij', class_='btn btn-primary')
