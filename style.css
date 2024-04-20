@@ -4,6 +4,12 @@
   color: white;
 }
 
+.row-widget button::hover{
+  justify-content: center;
+  background-color: #0d6efd;
+  color: white;
+}
+
 .stButton {
   text-align: right;
 }
