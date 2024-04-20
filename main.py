@@ -167,21 +167,15 @@ font-size: 16px;
 color: #29ABE2;
 }
 
-@media (min-width: 992px)
-.col-lg-6 {
--ms-flex: 0 0 50%;
-flex: 0 0 50%;
-max-width: 50%;
-}
-@media (min-width: 992px)
-.col-lg-6 {
--ms-flex: 0 0 50%;
-flex: 0 0 50%;
-max-width: 50%;
-}
-@media (min-width: 992px)
-.container {
-max-width: 960px;
+@media (min-width: 992px) { 
+.col-lg-6 { 
+-ms-flex: 0 0 50%; 
+flex: 0 0 50%; 
+max-width: 50%; }
+
+.container { 
+max-width: 960px; 
+} 
 }
 
 </style>""",unsafe_allow_html=True)
