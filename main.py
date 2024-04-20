@@ -17,7 +17,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import mysql.connector
-from contact import contact
 #-------------------------------------------------------------------------------------------
 from streamlit_option_menu import option_menu
 headers = requests.utils.default_headers()
