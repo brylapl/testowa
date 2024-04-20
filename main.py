@@ -197,9 +197,10 @@ ul.bull li {
 padding: 0;
 margin-left: 10px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
 div.block-container.st-emotion-cache-gh2jqd.ea3mdgi5[data-testid="stAppViewBlockContainer"] {
 padding:0px;
+gap: -1rem;
 }
 }
 }
