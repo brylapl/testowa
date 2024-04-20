@@ -1,5 +1,4 @@
-.row-widget {
-    padding-top: 20px;
+.row-widget > button {
     display: flex;
     justify-content: center; 
 }
