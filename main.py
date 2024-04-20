@@ -32,24 +32,74 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-# 5. Add on_change callback
-def on_change(key):
-    selection = st.session_state[key]
+# # 5. Add on_change callback
+# def on_change(key):
+#     selection = st.session_state[key]
     
-selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
-                        icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
-                        on_change=on_change, key='menu_5', orientation="horizontal")
+# selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
+#                         icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
+#                         on_change=on_change, key='menu_5', orientation="horizontal")
 
-if selected5 == "Home":
-    st.write("You selected the Home page")    
-elif selected5 == "Upload":
-    st.write("You selected the Upload page")
-elif selected5 == "Contact":
-    with open("contact.html", "r") as file:
-        con = file.read()
-        st.markdown(con, unsafe_allow_html=True)
-    contact()
-elif selected5 == "About":
-    with open("about.html", "r") as file:
-        about_content = file.read()
-        st.markdown(about_content, unsafe_allow_html=True)
+# if selected5 == "Home":
+#     st.write("You selected the Home page")    
+# elif selected5 == "Upload":
+#     st.write("You selected the Upload page")
+# elif selected5 == "Contact":
+#     with open("contact.html", "r") as file:
+#         con = file.read()
+#         st.markdown(con, unsafe_allow_html=True)
+#     contact()
+# elif selected5 == "About":
+#     with open("about.html", "r") as file:
+#         about_content = file.read()
+#         st.markdown(about_content, unsafe_allow_html=True)
+
+
+# Funkcja do tworzenia ikon z tekstem
+def icon_text(icon, text):
+    return f'<div style="display: flex; justify-content: center; align-items: center;"><div style="padding: 5px;"><i class="{icon}" style="font-size: 24px;"></i></div><div>{text}</div></div>'
+
+# Ustawienia CSS dla menu bar
+st.markdown("""
+<style>
+.menu-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 60px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.menu-item:hover {
+    background-color: #e0e0e0;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Ikony do wyświetlenia w menu bar
+icons = ["fas fa-home", "fas fa-search", "far fa-user"]
+
+# Teksty odpowiadające ikonom
+texts = ["Home", "Search", "Profile"]
+
+# Menu bar
+st.markdown('<div class="menu-bar">', unsafe_allow_html=True)
+for i in range(len(icons)):
+    if st.button(icon_text(icons[i], texts[i]), key=str(i), class_="menu-item"):
+        st.write(f"You clicked {texts[i]}!")
+st.markdown('</div>', unsafe_allow_html=True)
+
