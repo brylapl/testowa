@@ -54,7 +54,8 @@ with open('style.css') as f:
 #         about_content = file.read()
 #         st.markdown(about_content, unsafe_allow_html=True)
 
-btn = st.button('Uruchom')
+def btn():
+    btn = st.button('Uruchom')
 st.markdown('''
 <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Landing Page</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"> 
@@ -76,4 +77,6 @@ body {
 <div class="container"> 
 <h1>Welcome to Our Landing Page</h1> 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus libero. In porttitor interdum sapien nec viverra. Nullam pharetra nisi sit amet pulvinar iaculis. </p> 
-<a href="#" class="btn btn-primary text-white">Learn More</a> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script> </body> </html> ''', unsafe_allow_html=True)
+<a href="#" class="btn btn-primary text-white">Learn More</a> </div> 
+</body> 
+</html> ''', unsafe_allow_html=True)
