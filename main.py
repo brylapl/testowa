@@ -72,7 +72,7 @@ st.write(
 , unsafe_allow_html=True)
 
 
-st.write("Wybrany wynik:", selected_option)
+st.write("Wybrany wynik:")
 
 
 
