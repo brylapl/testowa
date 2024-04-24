@@ -37,17 +37,10 @@ with open('html/style.css') as f:
 #     st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-genre = st.radio(
-    "What's your favorite movie genre",
-    ["[Comedy]", "Drama", "Documentary"],
-    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
-
-
-st.markdown("### Radio buttons with Streamlit")
 
 option = st.radio("Select an option:", ["Option 1", "Option 2", "Option 3"])
 
-html_code = """
+html_code = f"""
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -70,6 +63,7 @@ html_code = """
       <h3>Kolumna 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      {option}
     </div>
     <div class="col-sm-4">
       <h3>Kolumna 2</h3>
@@ -85,7 +79,7 @@ html_code = """
 </div>
   </body>
 </html>
-""".format(option)
+"""
 
 st.markdown(html_code, unsafe_allow_html=True)
 
