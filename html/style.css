@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-[data-testid="stSelectbox"]  {
-    text-align:center;
+[data-testid="stWidgetLabel"]  {
+    background-color:red;
 }
 
