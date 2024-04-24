@@ -46,7 +46,7 @@ st.markdown("""
 """,unsafe_allow_html=True)
 
 
-wybor = st.selectbox('Select Option', ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
+wybor = st.selectbox('', ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
 
 st.markdown(f"""
 <div class="container mt-5"> 
