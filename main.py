@@ -47,3 +47,19 @@ if genre == '[Comedy]':
 else:
     st.write("You didn\'t select comedy.")
 
+import streamlit as st
+
+st.markdown("### Radio buttons with Streamlit")
+
+option = st.radio("Select an option:", ["Option 1", "Option 2", "Option 3"])
+
+html_code = """
+<div class="row">
+  <div class="col">Column 1</div>
+  <div class="col">Selected option: {}</div>
+  <div class="col">Column 3</div>
+</div>
+""".format(option)
+
+st.markdown(html_code, unsafe_allow_html=True)
+
