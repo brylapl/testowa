@@ -39,40 +39,10 @@ with open('html/style.css') as f:
 
 
 
-import streamlit as st
+radio_button = "<input type='radio' name='gender' value='male'> Male <input type='radio' name='gender' value='female'> Female"
 
-st.write(
-    f"""
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h2>Wybierz jedną z opcji:</h2>
-            </div>
-            <div class="col">
-                <h2>Wybrany wynik:</h2>
-                <p id="result"></p>
-            </div>
-            <div class="col">
-                <h2>Radio button:</h2>
-                <div>
-                    <input type="radio" id="option1" name="option" value="option1">
-                    <label for="option1">Opcja 1</label>
-                </div>
-                <div>
-                    <input type="radio" id="option2" name="option" value="option2">
-                    <label for="option2">Opcja 2</label>
-                </div>
-                <div>
-                   {st.radio("Wybierz jedną z opcji:", ["Opcja 1", "Opcja 2", "Opcja 3"])}
-                </div>
-            </div>
-        </div>
-    </div>
-    """
-, unsafe_allow_html=True)
+st.markdown(radio_button, unsafe_allow_html=True)
 
-
-st.write("Wybrany wynik:")
 
 
 
