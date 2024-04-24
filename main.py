@@ -38,22 +38,32 @@ with open('html/style.css') as f:
 #------------------------------------------------------------------------------------------------
 
 
-# Tworzenie kontenera html
-st.markdown(
-    """
-    <div style='background-color: #f9f9f9; padding: 20px;'>
-       <h2>Wybierz opcję:</h2>
-       <input type="radio" id="option1" name="option" value="1">
-       <label for="option1">Opcja 1</label><br>
-       <input type="radio" id="option2" name="option" value="2">
-       <label for="option2">Opcja 2</label><br>
-       <input type="radio" id="option3" name="option" value="3">
-       <label for="option3">Opcja 3</label>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.title("Markdown bug")
+st.caption('Output')
 
+def tweet_button(tag: str, 
+                 link: str, 
+                text: str, 
+                user: str):
+  tweet = f"""
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <a href="https://twitter.com/intent/tweet?url={link}&text={text}&via={user}&hashtags={tag}">
+  <button class="ui twitter button large ui button">
+   <i class="twitter icon"></i>
+    Tweet
+  </button></a>
+    """
+st.markdown(tweet, unsafe_allow_html=True)
+
+st.write("")
+tweet_button(tag='streamlit, share', 
+             link='https://30days.streamlit.app/', 
+             text='Streamlit share button', 
+             user='streamlit')
+
+st.write("")
+st.write('📌 NOTE: This button only works if you have a valid Twitter account.')
 
 
 
