@@ -37,3 +37,13 @@ with open("html/index.html", "r") as file:
     st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
+genre = st.radio(
+    "What's your favorite movie genre",
+    ["[Comedy]", "Drama", "Documentary"],
+    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+
+if genre == '[Comedy]':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn\'t select comedy.")
+
