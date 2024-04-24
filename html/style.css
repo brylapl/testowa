@@ -5,6 +5,6 @@
 
 [data-testid="element-container"]  {
     background-color:red;
-    width:50%;
+    max-width: 500px;
 }
 
