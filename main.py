@@ -39,7 +39,7 @@ with open("html/index.html", "r") as file:
 
 st.markdown("""
 <body>
-    <div class="form-check form-switch">
+    <div class="form-check form-switch pt-4">
     <input class="form-check-input" type="checkbox" id="darkModeSwitch">
     <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
   </div>
