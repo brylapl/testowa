@@ -52,10 +52,9 @@ st.markdown(f"""
 <div class="container mt-5"> 
 <div class="row"> 
 <div class="col text-center"> 
-<h3>Column 3</h3> 
+<h3>{wybor}</h3> 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> 
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> 
-<p class="p-5 bg-primary">{wybor}</p> 
 </div> 
 </div> 
 </div> """, unsafe_allow_html=True)
