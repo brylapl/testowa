@@ -37,45 +37,33 @@ with open("html/index.html", "r") as file:
     st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-st.markdown("""
-<!doctype html>
-<html lang="en" data-bs-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="form-check form-switch pt-5">
+dark_mode_toggle = """
+<div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="darkModeSwitch">
     <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-  </div>
+</div>
 
-  <script>
+<script>
     const darkModeSwitch = document.getElementById('darkModeSwitch');
     const body = document.body;
 
     darkModeSwitch.addEventListener('change', () => {
-      if (darkModeSwitch.checked) {
-        body.setAttribute('data-bs-theme', 'dark');
-      } else {
-        body.setAttribute('data-bs-theme', 'light');
-      }
+        if (darkModeSwitch.checked) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
     });
-  </script>
-  </body>
-</html>
-""",unsafe_allow_html=True)
 
-st.markdown("""
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-""",unsafe_allow_html=True)
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeSwitch.checked = true;
+    }
+</script>
+"""
+
+st.markdown(dark_mode_toggle, unsafe_allow_html=True)
 
 
 wybor = st.selectbox('', ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
