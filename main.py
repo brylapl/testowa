@@ -50,7 +50,7 @@ st.markdown("""
 <div class="container mt-5">
   <div class="row">
     <div class="col text-center">
-      <h3>Column 3</h3>        
+      <h3>Column 1</h3>        
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
@@ -66,7 +66,7 @@ st.markdown("""
 <h3>Column 3</h3> 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> 
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> 
-<p class="w-50 p-5 bg-dark">{}</p> 
+<p class="p-5 bg-primary">{}</p> 
 </div> 
 </div> 
 </div> """.format(st.selectbox('Select Option', ['Option 1', 'Option 2', 'Option 3', 'Option 4'])), unsafe_allow_html=True)
