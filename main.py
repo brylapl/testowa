@@ -32,9 +32,9 @@ with open('html/style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 #HTML
-# with open("html/index.html", "r") as file:
-#     index = file.read()
-#     st.markdown(index, unsafe_allow_html=True)
+with open("html/index.html", "r") as file:
+    index = file.read()
+    st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
 
