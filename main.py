@@ -42,7 +42,7 @@ with open('html/style.css') as f:
 import streamlit as st
 
 st.write(
-    """
+    f"""
     <div class="container-fluid">
         <div class="row">
             <div class="col">
