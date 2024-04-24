@@ -38,34 +38,12 @@ with open('html/style.css') as f:
 #------------------------------------------------------------------------------------------------
 
 
-st.title("Markdown bug")
-st.caption('Output')
-
-def tweet_button(tag: str, 
-                 link: str, 
-                text: str, 
-                user: str):
-  tweet = f"""
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <a href="https://x.com/intent/tweet?url={link}&text={text}&via={user}&hashtags={tag}">
-  <button class="ui twitter button large ui button">
-   <i class="twitter icon"></i>
-    Tweet
-  </button></a>
-    """
-st.markdown(tweet, unsafe_allow_html=True)
-
-st.write("")
-
-tweet_button(tag='streamlit, share', 
-             link='https://30days.streamlit.app/', 
-             text='Streamlit share button', 
-             user='streamlit')
-
-st.write("")
-st.write('📌 NOTE: This button only works if you have a valid Twitter account.')
-
+st.markdown("""
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+""",unsafe_allow_html=True)
 
 
 
