@@ -46,4 +46,16 @@ st.markdown("""
 """,unsafe_allow_html=True)
 
 
+st.markdown("""
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+""",unsafe_allow_html=True)
+
 
