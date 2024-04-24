@@ -38,10 +38,21 @@ with open('html/style.css') as f:
 #------------------------------------------------------------------------------------------------
 
 
-
-radio_button = "<input type='radio' name='gender' value='male'> Male <input type='radio' name='gender' value='female'> Female"
-
-st.markdown(radio_button, unsafe_allow_html=True)
+# Tworzenie kontenera html
+st.markdown(
+    """
+    <div style='background-color: #f9f9f9; padding: 20px;'>
+       <h2>Wybierz opcję:</h2>
+       <input type="radio" id="option1" name="option" value="1">
+       <label for="option1">Opcja 1</label><br>
+       <input type="radio" id="option2" name="option" value="2">
+       <label for="option2">Opcja 2</label><br>
+       <input type="radio" id="option3" name="option" value="3">
+       <label for="option3">Opcja 3</label>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
