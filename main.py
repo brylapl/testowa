@@ -37,6 +37,27 @@ with open("html/index.html", "r") as file:
     st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
+st.markdown("""
+<body>
+    <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+    <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+  </div>
+
+  <script>
+    const darkModeSwitch = document.getElementById('darkModeSwitch');
+    const body = document.body;
+
+    darkModeSwitch.addEventListener('change', () => {
+      if (darkModeSwitch.checked) {
+        body.setAttribute('data-bs-theme', 'dark');
+      } else {
+        body.setAttribute('data-bs-theme', 'light');
+      }
+    });
+  </script>
+  </body>
+""",unsafe_allow_html=True)
 
 st.markdown("""
 <div class="container-fluid p-5 bg-primary text-white text-center">
