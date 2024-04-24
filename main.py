@@ -49,7 +49,7 @@ st.markdown("""
 st.markdown("""
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col">
       <h3>Column 3</h3>        
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
