@@ -37,26 +37,3 @@ with open("html/index.html", "r") as file:
     st.markdown(index, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-# # 5. Add on_change callback
-# def on_change(key):
-#     selection = st.session_state[key]
-    
-# selected5 = option_menu(None, ["Home", "Calculator", "Contact", 'About'],
-#                         icons=['bi-house-door-fill', 'bi-file-bar-graph-fill', "bi-envelope-at-fill", 'bi-info-square-fill'],
-#                         on_change=on_change, key='menu_5', orientation="horizontal")
-
-# if selected5 == "Home":
-#     st.write("You selected the Home page")    
-# elif selected5 == "Upload":
-#     st.write("You selected the Upload page")
-# elif selected5 == "Contact":
-#     with open("contact.html", "r") as file:
-#         con = file.read()
-#         st.markdown(con, unsafe_allow_html=True)
-#     contact()
-# elif selected5 == "About":
-#     with open("about.html", "r") as file:
-#         about_content = file.read()
-#         st.markdown(about_content, unsafe_allow_html=True)
-
-
