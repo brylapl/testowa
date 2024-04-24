@@ -6,6 +6,7 @@
 [data-testid="element-container"], [data-baseweb="select"]  {
     text-align:center;
     background-color:red;
-    max-width: 300px;
+    max-width: 500px;
+    margin: 0 auto; 
 }
 
