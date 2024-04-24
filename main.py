@@ -48,7 +48,7 @@ def tweet_button(tag: str,
   tweet = f"""
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <a href="https://twitter.com/intent/tweet?url={link}&text={text}&via={user}&hashtags={tag}">
+  <a href="https://x.com/intent/tweet?url={link}&text={text}&via={user}&hashtags={tag}">
   <button class="ui twitter button large ui button">
    <i class="twitter icon"></i>
     Tweet
@@ -57,6 +57,7 @@ def tweet_button(tag: str,
 st.markdown(tweet, unsafe_allow_html=True)
 
 st.write("")
+
 tweet_button(tag='streamlit, share', 
              link='https://30days.streamlit.app/', 
              text='Streamlit share button', 
