@@ -39,6 +39,8 @@ with open('html/style.css') as f:
 
 
 
+import streamlit as st
+
 st.write(
     """
     <div class="container-fluid">
@@ -61,8 +63,7 @@ st.write(
                     <label for="option2">Opcja 2</label>
                 </div>
                 <div>
-                    <input type="radio" id="option3" name="option" value="option3">
-                    <label for="option3">Opcja 3</label>
+                   {st.radio("Wybierz jedną z opcji:", ["Opcja 1", "Opcja 2", "Opcja 3"])}
                 </div>
             </div>
         </div>
@@ -70,8 +71,9 @@ st.write(
     """
 , unsafe_allow_html=True)
 
-selected_option = st.radio("Wybierz jedną z opcji:", ["Opcja 1", "Opcja 2", "Opcja 3"])
+
 st.write("Wybrany wynik:", selected_option)
+
 
 
 
