@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-[data-testid="stSelectbox"]  {
+[data-testid="element-container"]  {
     background-color:red;
     width:50%;
 }
