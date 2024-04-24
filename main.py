@@ -40,7 +40,7 @@ with open('html/style.css') as f:
 
 option = st.radio("Select an option:", ["Option 1", "Option 2", "Option 3"])
 
-html_code = f"""
+html_code = """
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -79,7 +79,7 @@ html_code = f"""
 </div>
   </body>
 </html>
-"""
+""".format(option)
 
 st.markdown(html_code, unsafe_allow_html=True)
 
