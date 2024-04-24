@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-[data-testid="element-container"], [data-baseweb="select"]  {
-    text-align:center;
-    max-width: 50%;
-}
 
 .stMarkdown {
 width:100%;
