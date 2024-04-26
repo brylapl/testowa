@@ -4,12 +4,13 @@
 }
 
 /*  [data-testid="element-container"] {
-     width:50% !important;
-     text-align:center;
- } */
+width:50% !important;
+text-align:center;
+} */
 
 [data-testid="stSelectbox"] {
-     width:50% !important;
-     text-align:center;
- }
-    
+    width:50% !important;
+    text-align:center;
+    margin: 0px auto !important;
+}
+
