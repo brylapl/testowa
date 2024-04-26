@@ -38,3 +38,11 @@ text-align:center;
     margin: 0px auto !important;
 }
 
+[data-testid="stAlert"] {
+    width:50% !important;
+    text-align:center;
+    margin: 0px auto !important;
+}
+
+
+
