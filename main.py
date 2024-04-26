@@ -88,5 +88,35 @@ st.markdown(f"""
 </div> """, unsafe_allow_html=True)
 
 
+# Set the initial theme to be light
+st.set_page_config(page_title="Theme Changer", layout="wide")
+
+theme = st.selectbox("Select theme", ["Light", "Dark"])
+
+if theme == "Light":
+    st.write("You selected light theme.")
+    st.write("""
+    <style>
+    body {
+        color: black;
+        background-color: white;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+else:
+    st.write("You selected dark theme.")
+    st.write("""
+    <style>
+    body {
+        color: white;
+        background-color: #333333;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.write("This is some example text for the theme changer app.")
+
+
+
 
 
