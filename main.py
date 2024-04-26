@@ -43,4 +43,3 @@ with open("html/contacts.html", "r") as file:
     st.markdown(contact, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 
-contact()
