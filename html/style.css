@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.row-widget.stSelectbox {
-  width: 50%;
-}
-
+ [data-testid="element-container"] {
+     width:50%;
+     text-align:center;
+ }
