@@ -42,4 +42,5 @@ with open("html/contacts.html", "r") as file:
     contact = file.read()
     st.markdown(contact, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
+
 contact()
