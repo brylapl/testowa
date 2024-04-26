@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.row-widget .stSelectbox {
+.row-widget, .stSelectbox {
     width:50%;
 }
 
