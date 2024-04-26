@@ -20,3 +20,12 @@ text-align:center;
     font-size: 16px !important;
     font-weight: bold !important;
 }
+
+[data-testid="stTextArea"] {
+    width:50% !important;
+    text-align:center;
+    margin: 0px auto !important;
+}
+
+
+
