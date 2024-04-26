@@ -1,1 +1,26 @@
+.container {
+    width: 50% !important;
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+.st-emotion-cache-z5fcl4 {
+    padding: 0;
+}
+
+[data-testid="stSelectbox"],
+[data-testid="stTextArea"],
+[data-testid="stTextInput"],
+[data-testid="stButton"] {
+    width: 50% !important;
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+.st-emotion-cache-l9bjmx p {
+    word-break: break-word;
+    margin-bottom: 0;
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
 
