@@ -34,7 +34,7 @@ text-align:center;
 }
 [data-testid="stButton"] {
     width:50% !important;
-    text-align:center;
+    text-align:right;
     margin: 0px auto !important;
 }
 
