@@ -39,7 +39,7 @@ with open("html/index.html", "r") as file:
 #------------------------------------------------------------------------------------------------
 #CONTACT
 with open("html/contacts.html", "r") as file:
-    contact = file.read()
-    st.markdown(contact, unsafe_allow_html=True)
+    contacts = file.read()
+    st.markdown(contacts, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 contact()
