@@ -65,6 +65,14 @@ dark_mode_toggle = """
 
 st.markdown(dark_mode_toggle, unsafe_allow_html=True)
 
+mode = st.radio("Wybierz tryb", ["Jasny", "Ciemny"])
+
+if mode == "Jasny":
+    st.write("Tryb jasny")
+    st.set_option('theme', 'light')
+elif mode == "Ciemny":
+    st.write("Tryb ciemny")
+    st.set_option('theme', 'dark')
 
 wybor = st.selectbox('', ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
 
