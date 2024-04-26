@@ -81,33 +81,44 @@ st.markdown(f"""
 </div> """, unsafe_allow_html=True)
 
 
+ms = st.session_state
+if "themes" not in ms: 
+  ms.themes = {"current_theme": "light",
+                    "refreshed": True,
+                    
+                    "light": {"theme.base": "dark",
+                              "theme.backgroundColor": "black",
+                              "theme.primaryColor": "#c98bdb",
+                              "theme.secondaryBackgroundColor": "#5591f5",
+                              "theme.textColor": "white",
+                              "theme.textColor": "white",
+                              "button_face": "🌜"},
 
-theme = st.selectbox("Select theme", ["Light", "Dark"])
+                    "dark":  {"theme.base": "light",
+                              "theme.backgroundColor": "white",
+                              "theme.primaryColor": "#5591f5",
+                              "theme.secondaryBackgroundColor": "#82E1D7",
+                              "theme.textColor": "#0a1464",
+                              "button_face": "🌞"},
+                    }
+  
 
-if theme == "Light":
-    st.write("You selected light theme.")
-    st.write("""
-    <style>
-    body {
-        color: black;
-        background-color: white;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-else:
-    st.write("You selected dark theme.")
-    st.write("""
-    <style>
-    body {
-        color: white;
-        background-color: #333333;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+def ChangeTheme():
+  previous_theme = ms.themes["current_theme"]
+  tdict = ms.themes["light"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]
+  for vkey, vval in tdict.items(): 
+    if vkey.startswith("theme"): st._config.set_option(vkey, vval)
 
-st.write("This is some example text for the theme changer app.")
+  ms.themes["refreshed"] = False
+  if previous_theme == "dark": ms.themes["current_theme"] = "light"
+  elif previous_theme == "light": ms.themes["current_theme"] = "dark"
 
 
+btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
+st.button(btn_face, on_click=ChangeTheme)
 
+if ms.themes["refreshed"] == False:
+  ms.themes["refreshed"] = True
+  st.rerun()
 
 
