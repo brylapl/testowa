@@ -81,8 +81,6 @@ st.markdown(f"""
 </div> """, unsafe_allow_html=True)
 
 
-# Set the initial theme to be light
-st.set_page_config(page_title="Theme Changer", layout="wide")
 
 theme = st.selectbox("Select theme", ["Light", "Dark"])
 
