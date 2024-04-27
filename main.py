@@ -43,3 +43,45 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
     #st.markdown(contacts, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 #contact()
+import streamlit as st
+
+# Ustawienie szerokości menu dolnego
+st.markdown(
+    """
+    <style>
+    .st-bm {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 8px 0;
+        background-color: #f7f7f7;
+        border-top: 1px solid #ccc;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Elementy menu dolnego
+st.markdown(
+    """
+    <div class="st-bm">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/400px-Android_O_Preview_Logo.png" style="height: 24px;">
+            <p>Strona główna</p>
+        </div>
+        <div>
+            <img src="https://image.flaticon.com/icons/png/128/61/61848.png" style="height: 24px;">
+            <p>Ustawienia</p>
+        </div>
+        <div>
+            <img src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements-coloricon/512/09_chat-128.png" style="height: 24px;">
+            <p>Wiadomości</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
