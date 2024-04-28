@@ -43,3 +43,9 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
     #st.markdown(contacts, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 #contact()
+#------------------------------------------------------------------------------------------------
+HTML
+with open("index.html", "r") as file:
+    index = file.read()
+    st.markdown(index, unsafe_allow_html=True)
+------------------------------------------------------------------------------------------------
