@@ -44,100 +44,28 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 #------------------------------------------------------------------------------------------------
 #contact()
 
-# Usuwanie całego domyślnego kodu HTML i CSS
-st.markdown("""<style>
-.st-dm{
-    display: none;
-}
-.root {
-display: none;
-}
-.menu {
-    display: none;
-    }
-.content {
-    padding: 20px;
-}
-@media only screen and (min-width: 768px) {
-.navbar {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-}
-.nav-link {
-    color: white !important;
-    padding: 0 10px !important;
-}
-}
-    
-@media only screen and (max-width: 767px) { 
-.navbar { 
-position: fixed; 
-bottom: 0; 
-width: 100%; 
-background-color: #007bff; 
-color: white; 
-display: flex; 
-justify-content: space-around; 
-padding: 10px 0; 
-} 
-.nav-link { 
-color: white !important; 
-padding: 0 10px !important; 
-} 
-}
-</style>""", unsafe_allow_html=True)
+import streamlit as st
 
-# Dodawanie własnego kodu HTML
-st.markdown("""<h1>Witaj, to jest mój czysty dokument HTML!</h1>
-<p>Tutaj możesz dodać swoje własne elementy HTML i stylować je według własnych preferencji.</p>
-<nav class="navbar">
-    <button class="btn nav-link" onclick="showScreen('screen1')">Home <i class="bi bi-house-door"></i></button>
-    <button class="btn nav-link" onclick="showScreen('screen2')">Tables <i class="bi bi-table"></i></button>
-    <button class="btn nav-link" onclick="showScreen('screen3')">Contact <i class="bi bi-telephone"></i></button>
-</nav>
-<div class="container">
-    <div class="content" id="screen1">
-        <h1>Title</h1>
-        <p>This is the first paragraph on the home screen.</p>
-    </div>
-    <div class="content" id="screen2" style="display: none;">
-        <h1>Tables</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Heading 1</th>
-                    <th>Heading 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                </tr>
-                <tr>
-                    <td>Data 3</td>
-                    <td>Data 4</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="content" id="screen3" style="display: none;">
-        <h1>Contact Page</h1>
-        <p>Here you can place a contact form or contact information.</p>
-    </div>
-</div>
-
-<script>
-    function showScreen(screenId) {
-        document.querySelectorAll('.content').forEach(content => {
-            content.style.display = 'none';
-        });
-        document.getElementById(screenId).style.display = 'block';
-    }
-</script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+st.markdown("""
+    <script>
+        function showScreen(screenId) {
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(screenId).style.display = 'block';
+        }
+    </script>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+    <button onclick="showScreen('screen1')">Show Screen 1</button>
+    <button onclick="showScreen('screen2')">Show Screen 2</button>
+    <div class="content" id="screen1" style="display:none;">
+        Screen 1 Content
+    </div>
+    <div class="content" id="screen2" style="display:none;">
+        Screen 2 Content
+    </div>
+""", unsafe_allow_html=True)
+
+    
