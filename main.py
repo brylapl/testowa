@@ -47,4 +47,3 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 with open("index.html", "r") as file:
     index = file.read()
     st.markdown(index, unsafe_allow_html=True)
-------------------------------------------------------------------------------------------------
