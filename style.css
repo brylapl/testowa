@@ -2,6 +2,10 @@
     background-color:red;
     width: auto;
 }
+
+[data-testid="stApp"] {
+    width:auto;
+}
 .bs-icon {
   --bs-icon-size: .75rem;
   display: flex;
