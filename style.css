@@ -1,5 +1,6 @@
 #root {
     background-color:red;
+    display: none;
 }
 .bs-icon {
   --bs-icon-size: .75rem;
