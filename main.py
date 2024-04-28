@@ -105,4 +105,4 @@ st.markdown("""<!DOCTYPE html>
 </body>
 
 </html>
-""")
+""",unsafe_allow_html=True)
