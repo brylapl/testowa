@@ -46,9 +46,12 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 
 # Usuwanie całego domyślnego kodu HTML i CSS
 st.markdown("""<style>
-.st-dm {
+.st-dm{
     display: none;
 }
+.root {
+display: none;
+} 
 </style>""", unsafe_allow_html=True)
 
 # Dodawanie własnego kodu HTML
