@@ -97,12 +97,14 @@ padding: 0 10px !important;
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <body>
+<div class="container-fluid">
 <nav class="navbar">
 
 <button class="btn nav-link" onclick="showScreen('screen1')">Home <i class="bi bi-house-door"></i></button>
 <button class="btn nav-link" onclick="showScreen('screen2')">Tables <i class="bi bi-table"></i></button>
 <button class="btn nav-link" onclick="showScreen('screen3')">Contact <i class="bi bi-telephone"></i></button>
 </nav>
+</div>
 <div class="container">
 <div class="content" id="screen1">
 
