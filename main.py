@@ -43,29 +43,3 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
     #st.markdown(contacts, unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 #contact()
-
-import streamlit as st
-
-st.markdown("""
-    <script>
-        function showScreen(screenId) {
-            document.querySelectorAll('.content').forEach(content => {
-                content.style.display = 'none';
-            });
-            document.getElementById(screenId).style.display = 'block';
-        }
-    </script>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <button onclick="showScreen('screen1')">Show Screen 1</button>
-    <button onclick="showScreen('screen2')">Show Screen 2</button>
-    <div class="content" id="screen1" style="display:none;">
-        Screen 1 Content
-    </div>
-    <div class="content" id="screen2" style="display:none;">
-        Screen 2 Content
-    </div>
-""", unsafe_allow_html=True)
-
-    
