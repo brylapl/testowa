@@ -47,3 +47,5 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 with open("index.html", "r") as file:
     index = file.read()
     st.markdown(index, unsafe_allow_html=True)
+
+st.markdown("<a href='contact.html' target='_self'>STRONA</a>", unsafe_allow_html=True)
