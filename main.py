@@ -51,7 +51,41 @@ st.markdown("""<style>
 }
 .root {
 display: none;
+}
+.menu {
+    display: none;
+    }
+.content {
+    padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+.nav-link {
+    color: white !important;
+    padding: 0 10px !important;
+}
+}
+    
+@media only screen and (max-width: 767px) { 
+.navbar { 
+position: fixed; 
+bottom: 0; 
+width: 100%; 
+background-color: #007bff; 
+color: white; 
+display: flex; 
+justify-content: space-around; 
+padding: 10px 0; 
 } 
+.nav-link { 
+color: white !important; 
+padding: 0 10px !important; 
+} 
+}
 </style>""", unsafe_allow_html=True)
 
 # Dodawanie własnego kodu HTML
