@@ -44,7 +44,7 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 #------------------------------------------------------------------------------------------------
 #contact()
 #------------------------------------------------------------------------------------------------
-components.html("""<!DOCTYPE html>
+st.markdown("""<!DOCTYPE html>
 <html lang="en">
 
 <head>
