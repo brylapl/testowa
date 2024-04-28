@@ -29,7 +29,7 @@ st.set_page_config(page_title='Testowe', page_icon=":soccer:", layout="wide", in
 #------------------------------------------------------------------------------------------------
 #STYLE CSS
 with open('style.css') as f:
-st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+    st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 #------------------------------------------------------------------------------------------------
 #HTML
 #with open("html/index.html", "r") as file:
