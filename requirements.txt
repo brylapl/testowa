@@ -9,6 +9,5 @@ webdriver-manager
 streamlit-authenticator
 Flask
 mysql-connector-python
-flask
 streamlit-option-menu
 werkzeug
