@@ -1,13 +1,8 @@
-from flask import Flask, jsonify, request 
+import streamlit as st
+import undetected_chromedriver as uc
+driver = uc.Chrome(headless=True,use_subprocess=False)
+url = st.text_input('Wpisz adres') 
 
-app = Flask(__name__) 
-
-  
-@app.route('/', methods=['GET']) 
-
-def hello():
-    return '<h1>Hello</h1>' 
-    
-if __name__ == '__main__': 
-
-    app.run(debug=True) 
+if url not == '' and st.button('Uruchom'):
+    driver.get(url)
+    st.write(driver.title)
