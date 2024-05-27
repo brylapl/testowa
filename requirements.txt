@@ -11,3 +11,4 @@ Flask
 mysql-connector-python
 flask
 streamlit-option-menu
+werkzeug
