@@ -12,4 +12,3 @@ mysql-connector-python
 streamlit-option-menu
 werkzeug
 undetected-chromedriver
-PyVirtualDisplay
