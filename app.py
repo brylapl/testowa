@@ -1,8 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import streamlit as st 
 
 options = Options()
-options.headless = True
+options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 driver.get('http://selenium.dev')
 st.write(driver.title)
