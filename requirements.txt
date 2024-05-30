@@ -10,5 +10,4 @@ streamlit-authenticator
 Flask
 mysql-connector-python
 streamlit-option-menu
-werkzeug
-undetected-chromedriver
+countryflag
