@@ -5,6 +5,6 @@ import streamlit as st
 options = Options()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
-driver.get('http://selenium.dev')
+driver.get('http://onet.pl')
 st.write(driver.title)
 driver.quit()
