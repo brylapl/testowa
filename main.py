@@ -1,26 +1,23 @@
-import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.os_manager import ChromeType
 
-# Ustawiamy opcje dla przeglądarki, aby uruchamiała się w trybie bezgłowym
-chrome_options = Options()
-chrome_options.add_argument("--headless")
+@st.cache_resource
+def get_driver():
+    return webdriver.Chrome(
+        service=Service(
+            ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+        ),
+        options=options,
+    )
 
-# Uruchamiamy przeglądarkę w trybie bezgłowym
-driver = webdriver.Chrome(options=chrome_options)
+options = Options()
+options.add_argument("--disable-gpu")
+options.add_argument("--headless")
 
-# Funkcja do pobierania tytułu strony
-def get_page_title(url):
-    driver.get(url)
-    return driver.title
+driver = get_driver()
+driver.get("http://example.com")
 
-# Wyświetlamy interfejs użytkownika
-st.title("Pobieranie tytułu strony za pomocą Selenium i Streamlit")
-url = st.text_input("Wprowadź adres URL strony")
-
-if st.button("Pobierz tytuł strony"):
-    if url:
-        page_title = get_page_title(url)
-        st.write(f"Tytuł strony to: {page_title}")
-    else:
-        st.write("Wprowadź adres URL strony")
+st.code(driver.page_source)
