@@ -11,10 +11,6 @@ st.text('Test')
 
 browser = webdriver.Firefox()
 
-browser.get('http://www.yahoo.com')
-assert 'Yahoo' in browser.title
-
-elem = browser.find_element(By.NAME, 'p')  # Find the search box
-elem.send_keys('seleniumhq' + Keys.RETURN)
+browser.get('http://www.onet.pl')
 st.title(browser.title)
 browser.quit()
