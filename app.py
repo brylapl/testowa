@@ -7,7 +7,8 @@ options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 url = st.text_input("podaj adres strony")
 
-if st.button:
-    driver.get('http://onet.pl')
+btn = st.button("Start")
+if btn
+    driver.get(url)
     st.write(driver.title)
 driver.quit()
