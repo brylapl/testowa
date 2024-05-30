@@ -1,16 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import streamlit as st
 
-st.text('Test')
+options = Options()
+options.add_argument("no-sandbox")
+options.add_argument("headless")
+options.add_argument("start-maximized")
+options.add_argument("window-size=1900,1080"); 
+driver = webdriver.Chrome(options=options)
 
-browser = webdriver.Firefox()
-
-browser.get('http://www.onet.pl')
-st.title(browser.title)
-browser.quit()
+driver.get("https://www.onet.pl")
+html = driver.page_source
+st.write(html)
