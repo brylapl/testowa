@@ -1,13 +1,3 @@
 streamlit
-pandas
-beautifulsoup4
-requests
-lxml
-selenium
 seleniumbase
 webdriver-manager
-streamlit-authenticator
-Flask
-mysql-connector-python
-streamlit-option-menu
-countryflag
