@@ -5,6 +5,9 @@ import streamlit as st
 options = Options()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
-driver.get('http://onet.pl')
-st.write(driver.title)
+url = st.text_input("podaj adres strony")
+
+if st.button:
+    driver.get('http://onet.pl')
+    st.write(driver.title)
 driver.quit()
