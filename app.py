@@ -24,8 +24,8 @@ if start:
     upcoming_match.click()
     
     driver.switch_to.window(driver.window_handles[1])
-    driver.save_screenshot("testowa/image.png")
-    st.image("testowa/image.png")
+    driver.save_screenshot("image.png")
+    st.image("image.png")
     dropdown = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '(//*[@id="sidebar-scroll"]/div/div[1]/ul/li[4]/button)[1]')))
     
     if dropdown.text.strip() == 'Last 5 games':
