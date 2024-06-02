@@ -13,7 +13,7 @@ start = st.button('START')
 if start:
     driver.get(url)
     #Znajdz najblizszy mecz
-    upcoming_match_makeyourstats = driver.find_element(By.CSS_SELECTOR, '#desktopDiv > div.container.p-1 > div:nth-child(5) > div:nth-child(1) > div > div > div > a')
+    upcoming_match_makeyourstats = driver.find_element(By.XPATH, '//a[normalize-space(text()) = "Results"]/ancestor::div[1]/following-sibling::div[1]/div[1]//a')
     upcoming_match_makeyourstats.click()
     
     driver.switch_to.window(driver.window_handles[1])
