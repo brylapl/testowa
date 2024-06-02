@@ -14,6 +14,7 @@ start = st.button('START')
 if start:
     driver.get(url)
     st.write(driver.title)
+    st.write(driver.page_source)
     #Znajdz najblizszy mecz
     upcoming_match = driver.find_element(By.CSS_SELECTOR, '#desktopDiv > div.container.p-1 > div:nth-child(5) > div:nth-child(1) > div > div > div > a')
     st.write(upcoming_match)
