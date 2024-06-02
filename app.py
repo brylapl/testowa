@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import streamlit as st 
+from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
 
 options = Options()
@@ -15,10 +16,9 @@ start = st.button('START')
 if start:
     driver.get(url)
     st.write(driver.title)
-    st.write(driver.page_source)
     #Znajdz najblizszy mecz
     upcoming_match = driver.find_element(By.CSS_SELECTOR, '#desktopDiv > div.container.p-1 > div:nth-child(5) > div:nth-child(1) > div > div > div > a')
-    st.write(upcoming_match)
+    st.write(upcoming_match.text)
     upcoming_match.click()
     
     driver.switch_to.window(driver.window_handles[1])
