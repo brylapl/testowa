@@ -23,7 +23,7 @@ if start:
     driver.get(url)
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-
+    driver.maximize_window()
     st.write(driver.title)
     #Znajdz najblizszy mecz
     upcoming_match = driver.find_element(By.CSS_SELECTOR, '#desktopDiv > div.container.p-1 > div:nth-child(5) > div:nth-child(1) > div > div > div > a')
