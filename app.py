@@ -24,7 +24,7 @@ if start:
     
     driver.switch_to.window(driver.window_handles[1])
     
-    dropdown = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '(//*[@id="sidebar-scroll"]/div/div[1]/ul/li[4]/button)[1]')))
+    dropdown = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '(//*[@id="sidebar-scroll"]/div/div[1]/ul/li[4]/button)[1]')))
     
     if dropdown.text.strip() == 'Last 5 games':
         dropdown.click()
