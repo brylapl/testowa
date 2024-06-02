@@ -14,9 +14,9 @@ start = st.button('START')
 if start:
     driver.get(url)
     st.write(driver.title)
-    sleep(1)
     #Znajdz najblizszy mecz
     upcoming_match = driver.find_element(By.XPATH, '//a[normalize-space(text()) = "Results"]/ancestor::div[1]/following-sibling::div[1]/div[1]//a')
+    st.write(upcoming_match)
     upcoming_match.click()
     
     driver.switch_to.window(driver.window_handles[1])
