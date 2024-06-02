@@ -38,7 +38,7 @@ if start:
     if dropdown.text.strip() == 'Last 5 games':
         dropdown.click()
         sleep(0.5)
-        all_games = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="dropdown-menu show"]/a[3]')))
+        all_games = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="dropdown-menu show"]/a[last()]')))
         all_games.click()
     else:
         st.write('Nie otwarto wszystkich meczów')
