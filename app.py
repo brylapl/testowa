@@ -23,3 +23,5 @@ from time import sleep
 
 # st.page_link("/pages/contact.py", label="Page 1")
 # st.page_link("/pages/home.py", label="Pagehome1")
+
+st.title('HOME')
