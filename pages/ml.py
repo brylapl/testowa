@@ -3,8 +3,10 @@ import streamlit.components.v1 as components
 
 st.title('STRONA ZAWIERA ML')
 
+text = 'Skrzynka odbiorcza'
+
 components.html(
-   '''
+   f'''
    <!doctype html>
 <html lang="en">
   <head>
@@ -28,8 +30,9 @@ components.html(
     </div>
   </div>
 </div>
+
 <button type="button" class="btn btn-primary position-relative">
-  Inbox
+  {text}
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     99+
     <span class="visually-hidden">unread messages</span>
