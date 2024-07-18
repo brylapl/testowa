@@ -23,16 +23,15 @@ driver = webdriver.Chrome(options=options)
 #     driver.quit()
 
 
-pages = {
-    "Your account" : [
-        st.Page("app.py", title="Create your account"),
-        st.Page("home.py", title="Manage your account")
-    ],
-    "Resources" : [
-        st.Page("learn.py", title="Learn about us"),
-        st.Page("trial.py", title="Try it out")
-    ]
-}
+def page1():
+    st.write(st.session_state.foo)
 
-pg = st.navigation(pages)
+def page2():
+    st.write(st.session_state.bar)
+
+# Widgets shared by all the pages
+st.sidebar.selectbox("Foo", ["A", "B", "C"], key="foo")
+st.sidebar.checkbox("Bar", key="bar")
+
+pg = st.navigation(st.Page(page1), st.Page(page2))
 pg.run()
