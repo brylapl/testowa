@@ -23,5 +23,16 @@ driver = webdriver.Chrome(options=options)
 #     driver.quit()
 
 
-pg = st.navigation([st.Page(page1), st.Page("page2.py")])
+pages = {
+    "Your account" : [
+        st.Page("app.py", title="Create your account"),
+        st.Page("home.py", title="Manage your account")
+    ],
+    "Resources" : [
+        st.Page("learn.py", title="Learn about us"),
+        st.Page("trial.py", title="Try it out")
+    ]
+}
+
+pg = st.navigation(pages)
 pg.run()
