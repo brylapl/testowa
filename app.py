@@ -15,11 +15,9 @@ options.add_argument('--disable-gpu')
 options.add_argument("--window-size=1920x1080")
 options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36')
 driver = webdriver.Chrome(options=options)
-url = st.text_input("podaj adres strony")
 
-start = st.button('START')
-
-
+# url = st.text_input("podaj adres strony")
+# start = st.button('START')
 # if start:
 #     driver.get(url)
 #     driver.quit()
