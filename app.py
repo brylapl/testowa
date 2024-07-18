@@ -22,6 +22,6 @@ from time import sleep
 #     driver.quit()
 
 
-st.page_link("app.py", label="Home", icon="🏠")
+st.page_link("/pages/home.py", label="Home", icon="🏠")
 st.page_link("/pages/contact.py", label="Page 1", icon="1️⃣")
 
