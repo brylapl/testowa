@@ -21,7 +21,5 @@ from time import sleep
 #     driver.get(url)
 #     driver.quit()
 
-
-
 st.page_link("/pages/contact.py", label="Page 1", icon="1️⃣")
 
