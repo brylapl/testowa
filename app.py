@@ -26,3 +26,7 @@ driver = webdriver.Chrome(options=options)
 st.page_link("app.py", label="Home", icon="🏠")
 st.page_link("/pages/contact.py", label="Page 1", icon="1️⃣")
 
+if st.button("Home"):
+    st.switch_page("app.py")
+if st.button("Page 1"):
+    st.switch_page("pages/contact.py")
