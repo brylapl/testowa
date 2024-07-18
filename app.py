@@ -5,7 +5,7 @@ import streamlit as st
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
-from page_functions import page1
+from home import page1
 
 options = Options()
 options.add_argument("--headless=new")
