@@ -22,11 +22,8 @@ driver = webdriver.Chrome(options=options)
 #     driver.quit()
 
 
-def page2():
-    st.title("Second page")
 
-pg = st.navigation([
-    st.Page("page1.py", title="First page", icon="🔥"),
-    st.Page(page2, title="Second page", icon=":material/favorite:"),
-])
-pg.run()
+st.page_link("your_app.py", label="Home", icon="🏠")
+st.page_link("pages/page_1.py", label="Page 1", icon="1️⃣")
+st.page_link("pages/page_2.py", label="Page 2", icon="2️⃣", disabled=True)
+st.page_link("http://www.google.com", label="Google", icon="🌎")
