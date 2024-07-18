@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-components.iframe("https://example.com", height=500)
 st.title('STRONA ZAWIERA ML')
+
+components.iframe("https://www.flashscore.pl", height=500)
