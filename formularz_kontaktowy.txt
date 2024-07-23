@@ -1,0 +1,82 @@
+import streamlit as st
+import mysql.connector
+from mysql.connector import Error
+from datetime import datetime
+
+# Konfiguracja połączenia z bazą danych MySQL
+def create_connection():
+    connection = None
+    try:
+        connection = mysql.connector.connect(
+            host='YOUR_HOST',  # np. 'your-database-server.com'
+            user='YOUR_USER',  # np. 'root'
+            password='YOUR_PASSWORD',  # np. 'your_password'
+            database='YOUR_DATABASE'  # np. 'your_database_name'
+        )
+        print("Połączono z bazą danych MySQL")
+    except Error as e:
+        print(f"Zbłąd: {e}")
+    return connection
+
+# Funkcja do zapisywania wiadomości w bazie danych
+def save_message(subject, email, message):
+    connection = create_connection()
+    if connection:
+        query = "INSERT INTO contact_form (data, temat, email, wiadomosc) VALUES (%s, %s, %s, %s)"
+        data = (datetime.now(), subject, email, message)
+        cursor = connection.cursor()
+        cursor.execute(query, data)
+        connection.commit()
+        cursor.close()
+        connection.close()
+        st.success("Wiadomość została wysłana pomyślnie!")
+    else:
+        st.error("Nie udało się połączyć z bazą danych.")
+
+# Interfejs Streamlit
+def main():
+    st.title("Formularz kontaktowy")
+
+    # Widgety formularza
+    subject = st.selectbox("Wybierz temat:", ["Zgłoszenie problemu", "Zwykły kontakt"])
+    email = st.text_input("Opcjonalny adres email:")
+    message = st.text_area("Wiadomość:")
+
+    if st.button("Wyślij"):
+        # Sprawdzenie, czy pole wiadomości nie jest puste
+        if message:
+            save_message(subject, email, message)
+        else:
+            st.error("Wiadomość nie może być pusta!")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+Wskazówki do używania kodu:
+Wypełnij połączenie: Podmień YOUR_HOST, YOUR_USER, YOUR_PASSWORD i YOUR_DATABASE na odpowiednie wartości dla swojej bazy danych MySQL.
+
+Utwórz tabelę w MySQL: Przed uruchomieniem aplikacji upewnij się, że masz utworzoną tabelę contact_form w swojej bazie danych o odpowiedniej strukturze. Oto przykładowe zapytanie SQL do stworzenia tej tabeli:
+
+ 
+CREATE TABLE contact_form (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data DATETIME NOT NULL,
+    temat VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    wiadomosc TEXT NOT NULL
+);
+Uruchom aplikację: Aby uruchomić aplikację, użyj komendy:
+
+ 
+streamlit run app.py
+(gdzie app.py to nazwa pliku zawierającego powyższy kod).
+
+Testuj formularz: Po uruchomieniu aplikacji w przeglądarki będziesz mógł wpisać temat, opcjonalny email oraz wiadomość, a następnie zapisać je do bazy.
+
+Uwaga:
+Pamiętaj, żeby zawsze dbać o bezpieczeństwo danych - w tym przypadku, by upewnić się, że nie występuje ryzyko SQL Injection oraz odpowiednio zarządzać danymi użytkowników.
