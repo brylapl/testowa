@@ -10,7 +10,24 @@ import streamlit.components.v1 as components
 
 
 components.html(
-    "<p><span style='text-decoration: line-through double red;'>Oops</span>!</p>"
+    "<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello World</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1 class="mt-5 text-center">Color</h1>
+</div>
+
+<h1 class="h1 mt-5 text-center">Match Analyzer</h1>h1>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>"
 )
     
 # options = Options()
