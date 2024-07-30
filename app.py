@@ -26,7 +26,7 @@ html_code = """
 </body>
 </html>"""
 
-components.html(html_code, height="auto")
+components.html(html_code)
 
 # options = Options()
 # options.add_argument("--headless=new")
