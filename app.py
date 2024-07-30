@@ -5,7 +5,17 @@ import streamlit as st
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from flask import Flask, render_template
 
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
@@ -21,4 +31,4 @@ from time import sleep
 #     driver.get(url)
 #     driver.quit()
 
-st.title('HOME')
+
