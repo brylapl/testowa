@@ -19,7 +19,7 @@ html_code = """
 <body>
 <div class="container-fluid h-100">
 <h1 class="mt-5 text-center">TEST</h1>
-<h1 class="h1 mt-5 text-center">Match Analyzer</h1>
+<h1 class="h1 mt-5 text-center">Match</h1>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
