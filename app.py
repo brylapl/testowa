@@ -17,11 +17,10 @@ html_code = """
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
 <h1 class="mt-5 text-center">TEST</h1>
-</div>
-
 <h1 class="h1 mt-5 text-center">Match Analyzer</h1>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
