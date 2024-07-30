@@ -25,20 +25,20 @@ components.html(
 <h1 class="h1 mt-5 text-center">Match Analyzer</h1>h1>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>"""
 )
-    
+
+html_code = """
+<div style="height: 400px; overflow: auto;">
+    <h1>Tytuł</h1>
+    <p>Pierwszy akapit tekstu, który powinien być widoczny.</p>
+    <p>Drugi akapit tekstu, który jest dłuższy i powinien być widoczny w całości, jeśli kontener nie jest zbyt mały.</p>
+</div>
+"""
+
+components.html(html_code, height=400)
+
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
