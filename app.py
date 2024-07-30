@@ -33,14 +33,6 @@ html_code = """
   <p>Oslo has over 600.000 inhabitants.</p>
 </div>
 
-<div style="background-color:#D9EEE1;">
-  <h2>Rome</h2>
-  <p>Rome is the capital city of Italy.</p>
-  <p>Rome has almost 3 million inhabitants.</p>
-</div>
-
-<p>CSS styles are added to make it easier to separate the divs, and to make them more pretty:)</p>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
