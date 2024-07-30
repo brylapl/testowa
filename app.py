@@ -6,15 +6,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from flask import Flask, render_template
+import streamlit.components.v1 as components
 
-app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return render_template("index.html")
-
-if __name__ == "__main__":
-    app.run(debug=False)
+components.html(
+    "<p><span style='text-decoration: line-through double red;'>Oops</span>!</p>"
+)
     
 # options = Options()
 # options.add_argument("--headless=new")
