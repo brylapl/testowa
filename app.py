@@ -16,7 +16,7 @@ html_code = """
 <title>Hello World</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="height: 100%; margin: 0;">
 <div class="container-fluid h-100">
 <h1 class="mt-5 text-center">TEST</h1>
 <h1 class="h1 mt-5 text-center">Match</h1>
@@ -26,7 +26,7 @@ html_code = """
 </body>
 </html>"""
 
-components.html(html_code, height=500)
+components.html(html_code)
 
 # options = Options()
 # options.add_argument("--headless=new")
