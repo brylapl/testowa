@@ -16,10 +16,31 @@ html_code = """
 <title>Hello World</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body style="height: 100%; margin: 0;">
-<div class="container-fluid h-100">
-<h1 class="mt-5 text-center">TEST</h1>
-<h1 class="h1 mt-5 text-center">Match</h1>
+<body>
+
+<div class="container-fluid">
+<h1>Multiple DIV Elements</h1>
+
+<div style="background-color:#FFF4A3;">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+
+<div style="background-color:#FFC0C7;">
+  <h2>Oslo</h2>
+  <p>Oslo is the capital city of Norway.</p>
+  <p>Oslo has over 600.000 inhabitants.</p>
+</div>
+
+<div style="background-color:#D9EEE1;">
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+
+<p>CSS styles are added to make it easier to separate the divs, and to make them more pretty:)</p>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
