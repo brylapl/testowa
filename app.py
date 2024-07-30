@@ -21,8 +21,13 @@ html_code = """
 <h1 class="mt-5 text-center">Color</h1>
 </div>
 
-<h1 class="h1 mt-5 text-center">Match Analyzer</h1>h1>
-    
+<h1 class="h1 mt-5 text-center">Match Analyzer</h1>
+<p class="text-center">ASDKLHASD
+AJSD
+ASDAS
+ASDASD
+ASDASD
+</p>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>"""
