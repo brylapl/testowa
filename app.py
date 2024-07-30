@@ -25,6 +25,16 @@ components.html(
 <h1 class="h1 mt-5 text-center">Match Analyzer</h1>h1>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>"""
 )
