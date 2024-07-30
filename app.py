@@ -47,8 +47,8 @@ html_code = """
 </body>
 </html>"""
 
-components.html(html_code,height=1000)
-components.iframe("https://www.onet.pl", height=500)
+components.html(html_code,height=400)
+components.iframe("https://www.onet.pl", height=700)
 
 # options = Options()
 # options.add_argument("--headless=new")
