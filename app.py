@@ -21,7 +21,7 @@ html_code = """
 <div class="container-fluid">
 <h1>Multiple DIV Elements</h1>
 
-<div class="bg-success">
+<div class="bg-success p-5">
   <h2>London</h2>
   <p>London is the capital city of England.</p>
   <p>London has over 13 million inhabitants.</p>
