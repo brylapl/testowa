@@ -9,8 +9,7 @@ from flask import Flask, render_template
 import streamlit.components.v1 as components
 
 
-html_code = 
-    """
+html_code = """
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
