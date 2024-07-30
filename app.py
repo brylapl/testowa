@@ -9,7 +9,7 @@ from flask import Flask, render_template
 import streamlit.components.v1 as components
 
 
-components.html(
+html_code = 
     """
 <head>
 <meta charset="UTF-8">
