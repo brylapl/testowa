@@ -48,7 +48,7 @@ Donec dictum justo non dui aliquam, sit amet pretium magna tincidunt. Sed dui ju
 '''
 
 # Wyświetlanie HTML w Streamlit
-st.components.v1.html(html_content, height=500)
+st.components.v1.html(html_content, height=5000)
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
