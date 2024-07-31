@@ -17,6 +17,37 @@ st.markdown(
     f"<h1 style='text-align: center;'>{text}</h1>",
     unsafe_allow_html=True
 )
+
+
+
+# Połączenie z bazą danych
+conn = sqlite3.connect('data.db')
+cursor = conn.cursor()
+
+# Zapytanie o unikalne kraje
+cursor.execute("SELECT DISTINCT kraj FROM geo")
+countries = [row[0] for row in cursor.fetchall()]
+
+# Tytuł aplikacji
+st.title("Wybór kraju i miasta")
+
+# Lista rozwijana z krajami
+country = st.selectbox("Wybierz kraj:", countries)
+
+# Lista rozwijana z miastami, uzależniona od wyboru kraju
+if country:
+    cursor.execute("SELECT miasto FROM geo WHERE kraj = ?", (country,))
+    cities = [row[0] for row in cursor.fetchall()]
+    city = st.selectbox("Wybierz miasto:", cities)
+
+# Pokazanie wybranego kraju i miasta
+if 'city' in locals():  # Sprawdź, czy zmienna city została zdefiniowana
+    st.write(f"You selected: **{country}** and **{city}**")
+
+# Zamknij połączenie z bazą danych
+conn.close()
+
+
 #-----------------------------------------------------------------------------------------------------------  DZIAŁAJĄCY PODWÓJNY FILTR ZE SŁOWNIKA
 # tekst = st.text_input("Wpisz tekst")
 # if tekst:
