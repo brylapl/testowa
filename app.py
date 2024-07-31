@@ -8,49 +8,50 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
-tekst = st.text_input("Wpisz tekst")
 
+#-----------------------------------------------------------------------------------------------------------  DZIAŁAJĄCY PODWÓJNY FILTR ZE SŁOWNIKA
+# tekst = st.text_input("Wpisz tekst")
+# if tekst:
+#     new_txt = tekst.split(" ")
+#     for i in new_txt:
+#         st.write(f"Wybrano {i}")
+# else:
+#     st.error("Wpisz coś")
 
+# # Przykładowy HTML
+# dzis = st.date_input("Wybierz date")
+# # Słownik z krajami i miastami
+# data = {
+#     "Polska": ["Warszawa", "Kraków", "Wrocław", "Poznań"],
+#     "Niemcy": ["Berlin", "Monachium", "Hamburg", "Frankfurt"],
+#     "Francja": ["Paryż", "Lyon", "Marsylia", "Tuluza"],
+#     "Hiszpania": ["Madryt", "Barcelona", "Walencja", "Malaga"],
+#     "Włochy": ["Rzym", "Mediolan", "Neapol", "Turyn"]
+# }
 
-if tekst:
-    new_txt = tekst.split(" ")
-    for i in new_txt:
-        st.write(f"Wybrano {i}")
-else:
-    st.error("Wpisz coś")
+# # Tytuł aplikacji
+# st.title("Wybór kraju i miasta")
 
-# Przykładowy HTML
-dzis = st.date_input("Wybierz date")
-# Słownik z krajami i miastami
-data = {
-    "Polska": ["Warszawa", "Kraków", "Wrocław", "Poznań"],
-    "Niemcy": ["Berlin", "Monachium", "Hamburg", "Frankfurt"],
-    "Francja": ["Paryż", "Lyon", "Marsylia", "Tuluza"],
-    "Hiszpania": ["Madryt", "Barcelona", "Walencja", "Malaga"],
-    "Włochy": ["Rzym", "Mediolan", "Neapol", "Turyn"]
-}
+# # Lista rozwijana z krajami
+# country = st.selectbox("Wybierz kraj:", list(data.keys()))
 
-# Tytuł aplikacji
-st.title("Wybór kraju i miasta")
+# # Lista rozwijana z miastami, uzależniona od wyboru kraju
+# if country:
+#     city = st.selectbox("Wybierz miasto:", data[country])
 
-# Lista rozwijana z krajami
-country = st.selectbox("Wybierz kraj:", list(data.keys()))
+# # Pokazanie wybranego kraju i miasta
+# st.write(f"You selected: **{country}** and **{city}**")
 
-# Lista rozwijana z miastami, uzależniona od wyboru kraju
-if country:
-    city = st.selectbox("Wybierz miasto:", data[country])
+# if city:
+#     st.title(city)
 
-# Pokazanie wybranego kraju i miasta
-st.write(f"You selected: **{country}** and **{city}**")
+# html_code = f"""
+# <p> Dziś mamy {dzis}.
+# """
 
-if city:
-    st.title(city)
+# components.html(html_code)
 
-html_code = f"""
-<p> Dziś mamy {dzis}.
-"""
-
-components.html(html_code)
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # options = Options()
 # options.add_argument("--headless=new")
