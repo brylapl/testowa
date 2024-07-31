@@ -8,7 +8,10 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
+with open("html/contacts.html", "r", encoding="utf-8") as f:
+    html_content = f.read()
 
+components.html(html_content, height=500)
 
 
 
