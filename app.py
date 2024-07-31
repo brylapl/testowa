@@ -9,6 +9,14 @@ from flask import Flask, render_template
 import streamlit.components.v1 as components
 
 st.title("Test")
+# Tekst do wyświetlenia
+text = "To jest wyśrodkowany tekst na stronie!"
+
+# Użycie HTML do wyśrodkowania tekstu
+st.markdown(
+    f"<h1 style='text-align: center;'>{text}</h1>",
+    unsafe_allow_html=True
+)
 #-----------------------------------------------------------------------------------------------------------  DZIAŁAJĄCY PODWÓJNY FILTR ZE SŁOWNIKA
 # tekst = st.text_input("Wpisz tekst")
 # if tekst:
