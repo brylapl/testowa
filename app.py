@@ -182,7 +182,7 @@ height:72px;
 </html>
 """
 
-components.html(html_code,height=2000)
+components.html(html_code,height=5000)
 
 
 # options = Options()
