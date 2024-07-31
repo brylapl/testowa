@@ -10,11 +10,30 @@ import streamlit.components.v1 as components
 
 # Przykładowy HTML
 
-with open("html/index.html", "r", encoding="utf-8") as f:
-    html_content = f.read()
+# Słownik z krajami i miastami
+data = {
+    "Polska": ["Warszawa", "Kraków", "Wrocław", "Poznań"],
+    "Niemcy": ["Berlin", "Monachium", "Hamburg", "Frankfurt"],
+    "Francja": ["Paryż", "Lyon", "Marsylia", "Tuluza"],
+    "Hiszpania": ["Madryt", "Barcelona", "Walencja", "Malaga"],
+    "Włochy": ["Rzym", "Mediolan", "Neapol", "Turyn"]
+}
 
-# Wyświetlanie HTML w Streamlit
-st.components.v1.html(html_content)
+# Tytuł aplikacji
+st.title("Wybór kraju i miasta")
+
+# Lista rozwijana z krajami
+country = st.selectbox("Wybierz kraj:", list(data.keys()))
+
+# Lista rozwijana z miastami, uzależniona od wyboru kraju
+if country:
+    city = st.selectbox("Wybierz miasto:", data[country])
+
+# Pokazanie wybranego kraju i miasta
+st.write(f"You selected: **{country}** and **{city}**")
+
+
+
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
