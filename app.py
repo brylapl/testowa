@@ -52,6 +52,38 @@ html_code = """
         </div>
     </div>
 
+    <div class="container" style="padding-top: 10vh;padding-bottom:10vh">
+        <div class="row align-items-center px-2">
+            <div class="col-12 col-md-7 col-lg-6">
+                <div class="lc-block mb-4">
+                    <div editable="rich">
+                        <h1>The quick brown fox jumps.</h1>
+                        <p>Aenean vel nisi in ipsum congue fermentum et ut arcu. Proin leo diam, vulputate eu tellus ac, mattis cursus nunc. Aenean vel nisi in ipsum congue fermentum et ut arcu. Proin leo diam, vulputate eu tellus ac, mattis cursus nunc.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <div class="lc-block d-flex mb-5">
+                    <div class="pe-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">100%</h3>
+                        <span editable="inline" class="mb-0 text-muted"> Satisfaction </span>
+                    </div>
+                    <div class="border-start"></div>
+                    <div class="px-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">24/7</h3>
+                        <span editable="inline" class="mb-0 text-muted"> Support </span>
+                    </div>
+                    <div class="border-start"></div>
+                    <div class="ps-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">+40k</h3>
+                        <span editable="inline" class="mb-0 text-muted"> Products </span>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-12 col-md-5 col-lg-6">
+                <div class="lc-block"><img alt="" class="img-fluid mx-auto d-block" src="https://cdn.livecanvas.com/media/svg/undraw-sample/undraw_connected_world_wuay.svg" loading="lazy"></div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+    </div
+
 
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
