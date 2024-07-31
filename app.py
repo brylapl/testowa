@@ -8,7 +8,7 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
-
+st.title("Test")
 #-----------------------------------------------------------------------------------------------------------  DZIAŁAJĄCY PODWÓJNY FILTR ZE SŁOWNIKA
 # tekst = st.text_input("Wpisz tekst")
 # if tekst:
