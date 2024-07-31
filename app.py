@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
+import sqlite3
 
 st.title("Test")
 # Tekst do wyświetlenia
