@@ -10,6 +10,11 @@ import streamlit.components.v1 as components
 
 tekst = st.text_input("Wpisz tekst")
 
+if tekst:
+    new_txt = tekst.split(" ")
+    for i in new_txt:
+        st.write(f"Wybrano {i}")
+
 # Przykładowy HTML
 dzis = st.date_input("Wybierz date")
 # Słownik z krajami i miastami
