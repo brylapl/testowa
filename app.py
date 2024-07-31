@@ -10,6 +10,8 @@ import streamlit.components.v1 as components
 
 # Przykładowy HTML
 
+with open("html/index.html", "r", encoding="utf-8") as f:
+    html_content = f.read()
 
 # Wyświetlanie HTML w Streamlit
 st.components.v1.html(html_content, height=5000)
