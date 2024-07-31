@@ -61,7 +61,7 @@ html_code = """
 </html>
 """
 
-components.html(html_code,height=500)
+components.html(html_code,height=600)
 
 
 # options = Options()
