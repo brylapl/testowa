@@ -23,27 +23,29 @@ html_content = '''
     </script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a dynamic height example.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sapien at mi malesuada laoreet. Sed vel porttitor libero, tempus cursus dui. In gravida sagittis malesuada. Vivamus nisl magna, feugiat id ante suscipit, imperdiet dignissim ipsum. Suspendisse dolor nulla, mattis at turpis at, sagittis tristique enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus, nibh eget condimentum blandit, enim massa vulputate metus, eget placerat dolor turpis quis nibh. Integer congue enim vel massa luctus, vitae euismod ex efficitur. Aenean lacus purus, dapibus vel nisi eget, dictum bibendum ante. Sed id diam in risus gravida aliquet ac at enim. Phasellus vel nisi ac felis congue viverra. Phasellus in arcu hendrerit, sollicitudin erat vel, rhoncus quam.
-
-Nam erat neque, scelerisque a erat eget, aliquet pretium velit. Aliquam vulputate libero id massa iaculis placerat. Nullam pulvinar vitae nisi auctor tincidunt. Donec tortor massa, dictum a quam eget, semper dictum sapien. Nam elementum, enim a venenatis fermentum, dolor dui suscipit felis, placerat tempus est mauris sit amet leo. Sed faucibus nulla eu tortor consequat blandit. Phasellus ultricies non lectus vel tincidunt. Duis eu tempus metus.
-
-Morbi nisl ex, aliquam in scelerisque tincidunt, ultricies a tortor. Aliquam eu consequat justo. Aenean hendrerit quis erat et maximus. Ut non vehicula lacus. Nam porta eros ut mi tempor sodales. Proin nec malesuada libero. Suspendisse viverra eleifend tempus. Nunc consequat enim massa, sit amet accumsan lacus ultricies facilisis. Nulla efficitur ex dictum imperdiet maximus. Ut id leo feugiat, aliquam odio non, condimentum felis. Fusce tristique lectus eget fermentum cursus. Duis pharetra justo sed semper sollicitudin. Cras varius dapibus ante at malesuada. Vivamus eleifend eu mi et tincidunt. Praesent lectus diam, dignissim ac justo ac, egestas volutpat velit.
-
-Ut tincidunt odio non lectus condimentum viverra. Suspendisse sed orci ac nulla fringilla vestibulum vitae nec est. Nulla lectus arcu, finibus et aliquet ac, tincidunt ac dolor. In magna mauris, imperdiet commodo massa vitae, aliquet lobortis leo. Nulla facilisi. Maecenas eget viverra augue. Aenean tincidunt gravida lobortis. Vivamus eu massa semper diam egestas ullamcorper non eget lacus. Phasellus sit amet leo ac felis pharetra finibus vitae non nunc. Maecenas vel interdum tortor. Aenean fringilla lacinia leo sed lobortis. Donec ac libero mauris. Mauris a nibh leo. Fusce blandit at velit a vulputate. Ut id nibh ac leo sollicitudin ultrices. Praesent et nisl et mauris ornare bibendum.
-
-Donec dictum justo non dui aliquam, sit amet pretium magna tincidunt. Sed dui justo, faucibus in pulvinar sit amet, ullamcorper facilisis nunc. Curabitur semper bibendum mauris. Duis eu semper massa. In turpis ipsum, tincidunt nec dui vitae, varius pharetra lacus. Donec elit turpis, mollis eget justo id, ullamcorper semper quam. Proin non sagittis eros. Proin sed magna at enim viverra feugiat id sed orci. Nulla ac porta libero. Morbi et congue urna. Maecenas suscipit, elit nec dapibus tempor, mi nibh interdum elit, eget tempor nulla odio vel magna. Mauris condimentum aliquet felis, quis semper enim laoreet vel. Sed consequat, felis at consequat pellentesque, elit lectus pellentesque dolor, non suscipit est orci ut sapien.</p>
+<!-- Hero 6 - Bootstrap Brain Component -->
+<section class="py-4 py-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="container-fluid bsb-hero-6 bsb-overlay border border-dark" style="--bsb-overlay-opacity: 0.5; --bsb-overlay-bg-color: var(--bs-light-rgb); background-image: url('./assets/img/hero-img-1.webp');">
+          <div class="row justify-content-md-center align-items-center">
+            <div class="col-12 col-md-11 col-xl-10">
+              <h2 class="display-1 text-center text-md-start text-shadow-head fw-bold mb-4">Welcome to Presta</h2>
+              <p class="lead text-center text-md-start text-shadow-body mb-5 d-flex justify-content-sm-center justify-content-md-start">
+                <span class="col-12 col-sm-10 col-md-8 col-xxl-7">Where every squeak, every rattle, and every wobble finds its solution, ensuring your ride is always smooth and worry-free.</span>
+              </p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center justify-content-md-start">
+                <a href="#!" class="btn bsb-btn-2xl btn-outline-dark">Explore More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sapien at mi malesuada laoreet. Sed vel porttitor libero, tempus cursus dui. In gravida sagittis malesuada. Vivamus nisl magna, feugiat id ante suscipit, imperdiet dignissim ipsum. Suspendisse dolor nulla, mattis at turpis at, sagittis tristique enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus, nibh eget condimentum blandit, enim massa vulputate metus, eget placerat dolor turpis quis nibh. Integer congue enim vel massa luctus, vitae euismod ex efficitur. Aenean lacus purus, dapibus vel nisi eget, dictum bibendum ante. Sed id diam in risus gravida aliquet ac at enim. Phasellus vel nisi ac felis congue viverra. Phasellus in arcu hendrerit, sollicitudin erat vel, rhoncus quam.
-
-Nam erat neque, scelerisque a erat eget, aliquet pretium velit. Aliquam vulputate libero id massa iaculis placerat. Nullam pulvinar vitae nisi auctor tincidunt. Donec tortor massa, dictum a quam eget, semper dictum sapien. Nam elementum, enim a venenatis fermentum, dolor dui suscipit felis, placerat tempus est mauris sit amet leo. Sed faucibus nulla eu tortor consequat blandit. Phasellus ultricies non lectus vel tincidunt. Duis eu tempus metus.
-
-Morbi nisl ex, aliquam in scelerisque tincidunt, ultricies a tortor. Aliquam eu consequat justo. Aenean hendrerit quis erat et maximus. Ut non vehicula lacus. Nam porta eros ut mi tempor sodales. Proin nec malesuada libero. Suspendisse viverra eleifend tempus. Nunc consequat enim massa, sit amet accumsan lacus ultricies facilisis. Nulla efficitur ex dictum imperdiet maximus. Ut id leo feugiat, aliquam odio non, condimentum felis. Fusce tristique lectus eget fermentum cursus. Duis pharetra justo sed semper sollicitudin. Cras varius dapibus ante at malesuada. Vivamus eleifend eu mi et tincidunt. Praesent lectus diam, dignissim ac justo ac, egestas volutpat velit.
-
-Ut tincidunt odio non lectus condimentum viverra. Suspendisse sed orci ac nulla fringilla vestibulum vitae nec est. Nulla lectus arcu, finibus et aliquet ac, tincidunt ac dolor. In magna mauris, imperdiet commodo massa vitae, aliquet lobortis leo. Nulla facilisi. Maecenas eget viverra augue. Aenean tincidunt gravida lobortis. Vivamus eu massa semper diam egestas ullamcorper non eget lacus. Phasellus sit amet leo ac felis pharetra finibus vitae non nunc. Maecenas vel interdum tortor. Aenean fringilla lacinia leo sed lobortis. Donec ac libero mauris. Mauris a nibh leo. Fusce blandit at velit a vulputate. Ut id nibh ac leo sollicitudin ultrices. Praesent et nisl et mauris ornare bibendum.
-
-Donec dictum justo non dui aliquam, sit amet pretium magna tincidunt. Sed dui justo, faucibus in pulvinar sit amet, ullamcorper facilisis nunc. Curabitur semper bibendum mauris. Duis eu semper massa. In turpis ipsum, tincidunt nec dui vitae, varius pharetra lacus. Donec elit turpis, mollis eget justo id, ullamcorper semper quam. Proin non sagittis eros. Proin sed magna at enim viverra feugiat id sed orci. Nulla ac porta libero. Morbi et congue urna. Maecenas suscipit, elit nec dapibus tempor, mi nibh interdum elit, eget tempor nulla odio vel magna. Mauris condimentum aliquet felis, quis semper enim laoreet vel. Sed consequat, felis at consequat pellentesque, elit lectus pellentesque dolor, non suscipit est orci ut sapien.</p>
 </html>
 '''
 
