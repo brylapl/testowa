@@ -12,11 +12,11 @@ st.title("Główna Strona")
 
 # Link do podstrony `page1.py`
 if st.button("Przejdź do Page 1"):
-    st.experimental_rerun()  # Odświeżenie widoku
+    st.rerun()  # Odświeżenie widoku
     st.session_state.page = 'page1'
 
 if st.button("Przejdź do Page 2"):
-    st.experimental_rerun()  # Odświeżenie widoku
+    st.rerun()  # Odświeżenie widoku
     st.session_state.page = 'page2'
 
 # Wczytanie odpowiedniej podstrony
