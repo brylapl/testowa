@@ -32,6 +32,9 @@ if country:
 # Pokazanie wybranego kraju i miasta
 st.write(f"You selected: **{country}** and **{city}**")
 
+if city:
+    st.title(city)
+
 
 
 # options = Options()
