@@ -9,7 +9,7 @@ from flask import Flask, render_template
 import streamlit.components.v1 as components
 
 # Przykładowy HTML
-
+dzis = "31.07.2024"
 # Słownik z krajami i miastami
 data = {
     "Polska": ["Warszawa", "Kraków", "Wrocław", "Poznań"],
@@ -35,7 +35,9 @@ st.write(f"You selected: **{country}** and **{city}**")
 if city:
     st.title(city)
 
-
+html_code = f"""
+<p> Dziś mamy {dzis}.
+"""
 
 # options = Options()
 # options.add_argument("--headless=new")
