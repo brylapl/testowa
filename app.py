@@ -40,7 +40,7 @@ html_code = """
 </html>"""
 
 components.html(html_code,height=400)
-components.iframe("https://soccer.streamlit.app", height=700, scrolling=True)
+components.iframe("https://aplikacja.streamlit.app", height=700, scrolling=True)
 
 # options = Options()
 # options.add_argument("--headless=new")
