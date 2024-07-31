@@ -8,11 +8,29 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
-with open("html/test.html", "r", encoding="utf-8") as f:
-    html_code = f.read()
+# Przykładowy HTML
+html_content = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a dynamic height example.</p>
+</body>
+</html>
+'''
 
-components.html(html_code, height=1000)
-
+# Wyświetlanie HTML w Streamlit
+st.components.v1.html(html_content, height=500)
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
