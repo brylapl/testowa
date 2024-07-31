@@ -14,7 +14,7 @@ with open("html/index.html", "r", encoding="utf-8") as f:
     html_content = f.read()
 
 # Wyświetlanie HTML w Streamlit
-st.components.v1.html(html_content, height=5000)
+st.components.v1.html(html_content)
 # options = Options()
 # options.add_argument("--headless=new")
 # options.add_argument('--verbose')
