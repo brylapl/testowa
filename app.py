@@ -10,10 +10,14 @@ import streamlit.components.v1 as components
 
 tekst = st.text_input("Wpisz tekst")
 
+
+
 if tekst:
     new_txt = tekst.split(" ")
     for i in new_txt:
         st.write(f"Wybrano {i}")
+else:
+    st.error("Wpisz coś")
 
 # Przykładowy HTML
 dzis = st.date_input("Wybierz date")
