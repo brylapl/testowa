@@ -8,10 +8,23 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
-with open("html/contacts.html", "r", encoding="utf-8") as f:
-    html_content = f.read()
+st.title("Główna Strona")
 
-components.html(html_content, height=500)
+# Link do podstrony `page1.py`
+if st.button("Przejdź do Page 1"):
+    st.experimental_rerun()  # Odświeżenie widoku
+    st.session_state.page = 'page1'
+
+if st.button("Przejdź do Page 2"):
+    st.experimental_rerun()  # Odświeżenie widoku
+    st.session_state.page = 'page2'
+
+# Wczytanie odpowiedniej podstrony
+if 'page' in st.session_state:
+    if st.session_state.page == 'page1':
+        import page1
+    elif st.session_state.page == 'page2':
+        import page2
 
 
 
