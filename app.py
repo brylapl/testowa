@@ -8,6 +8,8 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 
+tekst = st.text_input("Wpisz tekst")
+
 # Przykładowy HTML
 dzis = st.date_input("Wybierz date")
 # Słownik z krajami i miastami
