@@ -38,6 +38,7 @@ if city:
 html_code = f"""
 <p> Dziś mamy {dzis}.
 """
+components.htm;(html_code)
 
 # options = Options()
 # options.add_argument("--headless=new")
