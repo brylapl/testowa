@@ -38,8 +38,8 @@ if city:
 html_code = f"""
 <p> Dziś mamy {dzis}.
 """
-if dzis:
-    components.html(html_code)
+
+components.html(html_code)
 
 # options = Options()
 # options.add_argument("--headless=new")
