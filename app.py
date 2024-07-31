@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 with open("html/test.html", "r", encoding="utf-8") as f:
     html_code = f.read()
 
-components.html(html_code, height=2000)
+components.html(html_code, height=1000)
 
 # options = Options()
 # options.add_argument("--headless=new")
