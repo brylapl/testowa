@@ -8,6 +8,25 @@ from time import sleep
 from flask import Flask, render_template
 import streamlit.components.v1 as components
 import sqlite3
+import undetected_chromedriver as uc
+import time 
+ 
+options = uc.ChromeOptions() 
+options.headless = False  # Set headless to False to run in non-headless mode
+
+driver = uc.Chrome(use_subprocess=True, options=options) 
+driver.get("https://www.datacamp.com/users/sign_in") 
+driver.maximize_window() 
+
+time.sleep(20) 
+scr = driver.save_screenshot("datacamp.png") 
+driver.close()
+
+if scr:
+    st.write("screen zrobiony")
+else:
+    st.write("brak screena")
+    
 
 st.title("Test")
 # Tekst do wyświetlenia
