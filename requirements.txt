@@ -3,3 +3,4 @@ seleniumbase
 webdriver-manager
 selenium == 4.13.0
 Flask
+undetected-chromedriver
